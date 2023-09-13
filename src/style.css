@@ -1,0 +1,41 @@
+@media (width < 934px) {
+  /*Home section Caauri*/
+  #caauri_home_section {
+    flex-direction: column;
+    background: white;
+  }
+  .caauri_div_home {
+    width: 100%;
+  }
+  #caauri_home_animation {
+    background-color: black;
+    margin-top: 64px;
+  }
+  #logo_wide {
+    visibility: hidden;
+  }
+  .remove_div {
+    display: none;
+  }
+  .visible_div {
+    display: block;
+  }
+  /*Section Home Items */
+  #home_sections_items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .items_div {
+    width: 100%;
+  }
+}
+
+@media (width > 932px) {
+  .anime_text {
+    display: none;
+  }
+}
+
+.element.active {
+}
