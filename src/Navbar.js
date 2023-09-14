@@ -10,19 +10,19 @@ export default function Navbar({ onMenuChange }) {
   return (
     <div
       style={{
-        backdropFilter: "blur(7.5px)",
+        backdropFilter: "blur(5px)",
         background: " rgba(255, 255, 255, 0.20)",
       }}
-      className="fixed w-full z-50 text-black "
+      className="fixed w-full  h-[65px] z-50 text-black "
     >
-      <div className="w-full flex z-50 justify-between">
-        <div className="w-1/2">
-          <img src="/images/logo.png" alt="" className="h-24" />
+      <div className="w-full flex z-50 py-0 px-5  sm:px-20 justify-between">
+        <div className="w-1/2 flex items-center  sm:mt-[3px]">
+          <img src="/logo/logo_black_text.png" alt="" className="h-11" />
         </div>
-        <div className="w-1/2 transition-all relative  flex justify-end gap-4 pr-8">
+        <div className="w-1/2 transition-all  relative  flex items-center  justify-end  gap-x-2">
           <div
             className={
-              menu ? "mt-8 cursor-pointer text-black font-medium" : "hidden"
+              menu ? "mt-3 cursor-pointer  text-black font-medium" : "hidden"
             }
             onClick={changeMenu}
           >
@@ -31,12 +31,12 @@ export default function Navbar({ onMenuChange }) {
           <div
             className={
               menu
-                ? "rounded-full mt-6 border cursor-pointer h-12 border-black"
+                ? "rounded-full mt-4 mb-[3px] border cursor-pointer h-9 border-black"
                 : "hidden"
             }
             onClick={changeMenu}
           >
-            <img src="/images/menu.png" alt="" className="h-12" />
+            <img src="/images/menu.png" alt="" className="h-9" />
           </div>
         </div>
       </div>
@@ -45,10 +45,10 @@ export default function Navbar({ onMenuChange }) {
         className={
           menu
             ? "hidden"
-            : "absolute z-50 top-0 sm:right-[24px]  sm:top-[24px] sm:rounded-3xl sm:shadow-2xl bg-white w-[100%] h-[100vh] sm:w-[441px] sm:h-[658px]"
+            : "absolute z-50 top-0 sm:right-[24px]  sm:top-[24px] sm:rounded-3xl sm:shadow-2xl bg-white w-[100%] h-[100vh] sm:w-[441px] sm:h-[558px]"
         }
       >
-        <div className="bg-white w-full flex items-center mt-12 sm:px-6 justify-between">
+        <div className="w-full flex items-center mt-2 sm:px-6  justify-between">
           <div className="w-1/2 ">
             <span className="sm:block hidden text-[#888]">
               Pharmacie azur,Angré
@@ -59,16 +59,16 @@ export default function Navbar({ onMenuChange }) {
               className="h-20 sm:hidden block"
             />
           </div>
-          <div className="w-1/2 gap-x-1 sm:pr-0 pr-4 flex justify-end">
+          <div className="w-1/2 gap-x-2 sm:pr-0 pr-4 flex justify-end">
             <div
-              className="mt-4 font-semibold text-xl cursor-pointer"
+              className="mt-2 font-semibold text-base cursor-pointer"
               onClick={changeMenu}
             >
               Retour
             </div>
             <img
               onClick={changeMenu}
-              className="cursor-pointer hidden sm:block"
+              className="cursor-pointer w-8 h-10 hidden sm:block"
               src="/logo/back.svg"
               alt=""
             />
@@ -100,50 +100,50 @@ export default function Navbar({ onMenuChange }) {
             </svg>
           </div>
         </div>
-        <div className="mt-8 px-8 sm:px-12 flex flex-col">
+        <div className="mt-8 px-9 sm:px-5 flex flex-col">
           <ul>
-            <li className="sm:text-3xl text-5xl font-thin sm:font-semibold sm:hover:text-4xl transition-all cursor-pointer">
+            <li className="sm:text-4xl text-5xl font-thin sm:font-normal sm:hover:translate-x-8  sm:hover:translate-y-[-10px] sm:hover:font-medium mt-6 sm:mt-2 sm:hover:text-4xl transition-all cursor-pointer">
               <Link to="/" onClick={changeMenu}>
                 Accueil
               </Link>
             </li>
-            <li className="sm:text-3xl text-5xl font-thin sm:font-semibold mt-6 sm:mt-2 sm:hover:text-4xl transition-all cursor-pointer">
+            <li className="sm:text-4xl text-5xl font-thin sm:font-normal sm:hover:translate-x-8  sm:hover:translate-y-[-10px] sm:hover:font-medium mt-6 sm:mt-2 sm:hover:text-4xl transition-all cursor-pointer">
               <Link to="/caaurimuniquez" onClick={changeMenu}>
                 Caaurimuquez
               </Link>
             </li>
-            <li className="sm:text-3xl text-5xl font-thin sm:font-semibold mt-6 sm:mt-2 sm:hover:text-4xl transition-all cursor-pointer">
+            <li className="sm:text-4xl text-5xl font-thin sm:font-normal sm:hover:translate-x-8  sm:hover:translate-y-[-10px] sm:hover:font-medium mt-6 sm:mt-2 sm:hover:text-4xl transition-all cursor-pointer">
               <Link to="/services" onClick={changeMenu}>
                 Service
               </Link>
             </li>
-            <li className="sm:text-3xl text-5xl font-thin sm:font-semibold mt-6 sm:mt-2 sm:hover:text-4xl transition-all cursor-pointer">
+            <li className="sm:text-4xl text-5xl font-thin sm:font-normal sm:hover:translate-x-8  sm:hover:translate-y-[-10px] sm:hover:font-medium mt-6 sm:mt-2 sm:hover:text-4xl transition-all cursor-pointer">
               <Link to="/portfolio" onClick={changeMenu}>
                 Portfolio
               </Link>
             </li>
-            <li className="sm:text-3xl text-5xl font-thin sm:font-semibold mt-6 sm:mt-2 sm:hover:text-4xl transition-all cursor-pointer">
+            <li className="sm:text-4xl text-5xl font-thin sm:font-normal sm:hover:translate-x-8  sm:hover:translate-y-[-10px] sm:hover:font-medium mt-6 sm:mt-2 sm:hover:text-4xl transition-all cursor-pointer">
               <Link to="/blog" onClick={changeMenu}>
                 {" "}
                 Blog
               </Link>
             </li>
-            <li className="sm:text-3xl text-5xl font-thin sm:font-semibold mt-6 sm:mt-2 sm:hover:text-4xl transition-all cursor-pointer">
+            <li className="sm:text-4xl text-5xl font-thin sm:font-normal sm:hover:translate-x-8  sm:hover:translate-y-[-10px] sm:hover:font-medium mt-6 sm:mt-2 sm:hover:text-4xl transition-all cursor-pointer">
               <Link to="/carriere" onClick={changeMenu}>
                 Carriere
               </Link>
             </li>
-            <li className="sm:text-3xl text-5xl font-thin sm:font-semibold mt-6 sm:mt-2 sm:hover:text-4xl transition-all cursor-pointer">
+            <li className="sm:text-4xl text-5xl font-thin sm:font-normal sm:hover:translate-x-8 sm:hover:translate-y-[-10px] sm:hover:font-medium mt-6 sm:mt-2 sm:hover:text-4xl transition-all cursor-pointer">
               <Link to="/contact" onClick={changeMenu}>
                 Contact
               </Link>
             </li>
           </ul>
         </div>
-        <div className="bg-white pl-8 sm:pl-0 mt-8 sm:mt-20 flex w-full">
+        <div className=" justif-between  flex w-full">
           <div className="w-1/2 flex sm:justify-end flex-col justify-start   sm:items-center">
             <span>
-              <div className="mt-8 cursor-pointer flex w-[200px] gap-1 py-4 hover:flex hover:items-center hover:justify-center hover:gap-0 hover:bg-black  transition-all px-2   hover:text-white hover:rounded-l-full hover:rounded-r-full">
+              <div className="mt-8 cursor-pointer flex w-[200px] gap-1 py-0  transition-all px-2">
                 <div>contact@caauri.com</div>
                 <div className="bg-black rounded-b-full w-6  transition-all flex items-center justify-center rounded-l-full">
                   <img src="/logo/frame.svg" alt="" />
@@ -154,7 +154,7 @@ export default function Navbar({ onMenuChange }) {
               Pharmacie azur,Angré
             </span>
           </div>
-          <div className="w-1/2 flex justify-end pr-12">
+          <div className="w-1/2 flex justify-end br pr-8">
             <ul>
               <li>
                 <img

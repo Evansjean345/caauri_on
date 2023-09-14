@@ -228,18 +228,18 @@ export default function SectionHome() {
           id="caauri_home_section"
           style={style}
         >
-          <div className="caauri_div_home w-[60%]  flex flex-col justify-center pl-6 lg:pl-6 md:pl-12  2xl:pl-28">
+          <div className="caauri_div_home w-[60%]  flex flex-col justify-center pl-6 lg:pl-6 md:pl-12  2xl:pl-40">
             <p
               data-aos="fade-down"
               data-aos-easing="linear"
               data-aos-duration="1500"
-              className="xl:font-semibold font-bold text-3xl md:text-6xl  sm:text-6xl xl:text-7xl xl:leading-[85px]"
+              className="xl:font-semibold leading-[41px] font-bold text-[30.5px] md:text-6xl  sm:text-6xl xl:text-7xl xl:leading-[85px]"
             >
               Une image de marque
               <br />
               qui attire réellement
               <br />
-              l'attention
+              l'attention.
             </p>
             {/* Remove div */}
             <div className="remove_div">
@@ -251,18 +251,16 @@ export default function SectionHome() {
               >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
                 aspernatur consequatur blanditiis accusamus fugit iste
-                laboriosam quis? Beatae quidem accusantium ut id voluptas velit
-                fuga provident optio, laudantium blanditiis veniam?
               </p>
               <span>
                 <div
                   data-aos="fade-down"
                   data-aos-easing="linear"
                   data-aos-duration="1700"
-                  className="mt-8 sm:font-medium  cursor-pointer flex w-[180px] gap-5 py-4 hover:flex hover:items-center hover:justify-center hover:gap-0 hover:bg-black  transition-all px-2   hover:text-white hover:rounded-l-full hover:rounded-r-full"
+                  className="mt-8 sm:font-medium   cursor-pointer flex w-[180px] gap-5 py-4 hover:flex hover:items-center hover:justify-center hover:gap-0 hover:bg-black  transition-all px-2   hover:text-white hover:rounded-l-full hover:rounded-r-full"
                 >
-                  <div>Caaurimuniquez</div>
-                  <div className="bg-black rounded-b-full w-6  transition-all flex items-center justify-center rounded-l-full">
+                  <div>Caaurimuquez</div>
+                  <div className="bg-black rounded-b-full w-6 sm:hover:mt-1 transition-all flex items-center justify-center rounded-l-full">
                     <img src="/logo/frame.svg" alt="" />
                   </div>
                 </div>
@@ -315,15 +313,13 @@ export default function SectionHome() {
           </div>
           {/* Visible_div */}
           <div className="visible_div hidden  px-8">
-            <p className="mt-8 text-xs sm:text-[24px] sm:leading-[35px]">
+            <p className="mt-8 text-[16px] sm:leading-[35px]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              aspernatur consequatur blanditiis accusamus fugit iste laboriosam
-              quis? Beatae quidem accusantium ut id voluptas velit fuga
-              provident optio, laudantium blanditiis veniam?
+              aspernatur consequatur blanditiis accusamus fugit iste
             </p>
             <span className="w-full flex  items-center justify-center">
               <div className="mt-8 sm:font-medium text-white flex w-[180px] gap-0 py-4 items-center justify-center bg-black  transition-all px-2    rounded-l-full rounded-r-full">
-                <div>Caaurimuniquez</div>
+                <div>Caaurimuquez</div>
                 <div className="bg-black rounded-b-full w-6  transition-all flex items-center justify-center rounded-l-full">
                   <img src="/logo/frame.svg" alt="" />
                 </div>
@@ -646,7 +642,7 @@ export default function SectionHome() {
         </div>
         {/* Scroll section */}
         <div
-          className="w-full h-[100vh] sm:bg-contain flex flex-col mt-52 px-2 "
+          className="w-full sm:h-[100vh] sm:bg-contain flex flex-col mt-52 px-2 "
           style={{
             background: "url('/icon/animation.gif')",
             backgroundPosition: "center",
@@ -707,12 +703,12 @@ export default function SectionHome() {
         {/* Portfolio */}
         <div
           ref={sectionRef}
-          className="w-full mt-32 h-[1037px] bg-black overflow-hidden flex-col flex items-center justify-center relative"
+          className="w-full mt-32 sm:mt-0  h-[1037px] bg-black overflow-hidden flex-col flex items-center justify-center relative"
         >
-          <span className="text-white lg:text-4xl text-xl z-30 font-normal">
+          <span className="text-white lg:text-3xl text-xl z-30 font-normal">
             PORTFOLIO
           </span>
-          <span className="text-white lg:text-8xl text-3xl z-30 sm:text-4xl font-medium mt-10 text-center">
+          <span className="text-white lg:text-7xl text-3xl z-30 sm:text-4xl font-medium mt-10 text-center">
             Un travail remarquable, et
             <br />
             rien de moins
@@ -746,25 +742,25 @@ export default function SectionHome() {
             ref={image1Ref}
             src="/images/pc.png"
             alt=""
-            className="absolute lg:bottom-0 bottom-[610px] left-12 opacity-40 lg:left-0 lg:w-[350px] lg:h-[250px] w-[113px] h-[103px] sm:h-[213px] sm:w-[203px]  z-10"
+            className="absolute lg:bottom-0 bottom-[610px] left-12 opacity-40 lg:left-0 lg:w-[280px] lg:h-[220px] w-[113px] h-[103px] sm:h-[213px] sm:w-[203px]  z-10"
           />
           <img
             ref={image7Ref}
             src="/images/pc.png"
             alt=""
-            className="absolute lg:bottom-0 bottom-[610px] left-24 opacity-40 lg:left-32 lg:w-[350px] lg:h-[250px] w-[113px] h-[103px] sm:h-[213px] sm:w-[203px]  z-10"
+            className="absolute lg:bottom-0 bottom-[610px] left-24 opacity-40 lg:left-32 lg:w-[300px] lg:h-[220px] w-[113px] h-[103px] sm:h-[213px] sm:w-[203px]  z-10"
           />
           <img
             ref={image5Ref}
             src="/images/pc.png"
             alt=""
-            className="absolute lg:bottom-0 bottom-[610px] left-24 opacity-40 lg:left-[500px] lg:w-[350px] lg:h-[250px] w-[113px] h-[103px] sm:h-[213px] sm:w-[203px]  z-10"
+            className="absolute lg:bottom-0 bottom-[610px] left-24 opacity-40 lg:left-[250px] lg:w-[300px] lg:h-[220px] w-[113px] h-[103px] sm:h-[213px] sm:w-[203px]  z-10"
           />
           <img
             ref={image3Ref}
             src="https://s3-alpha-sig.figma.com/img/396a/c52d/77798a6dd8fba3279527adfc010b6879?Expires=1694390400&Signature=ehRif3nIue5aNBp6oUrdVEpf2~5NKL7kXxA1ny9ttZDhPbUjL4A3ZDJ9EqpGNnRiuX6wiUW-mgxGWSHqGZG3yY~aAJbjUsO2KtattMp7lPjToPweo3kCquvNZw-F~gncgWgnU58uk28KfMUTkx4mQ9huufsCL~xmcgGrM-wQCBQrGT-4xkVQmxm7l3-JdVSMrf70G8Xsq4dPcUAEmC7WeWVrcPAJ6HRzdlbNrKv8EwrIcM2FrY5QdF8VFuAMSdsDmDJ4t-JNFT~-gkoFqg-t6LD5FEK5in7SHU-tRGX6KLS~mQnhy5sNyEBimdQV5oQ~j6xRRo03bX6Unj~bQmE5~g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
             alt=""
-            className="absolute lg:bottom-[-120px] lg:left-56 sm:left-64 opacity-40 lg:w-[300px] lg:h-[250px] z-10 h-[84px] w-[84px] "
+            className="absolute lg:bottom-[-120px] lg:left-56 sm:left-64 opacity-40 lg:w-[250px] lg:h-[200px] z-10 h-[84px] w-[84px] "
           />
           {/* right */}
 
@@ -772,25 +768,25 @@ export default function SectionHome() {
             ref={image2Ref}
             src="/images/pc.png"
             alt=""
-            className="absolute lg:bottom-0 lg:w-[350px] lg:h-[250px] w-[113px] h-[103px] sm:h-[213px] sm:w-[203px] lg:right-0 right-12 bottom-44 opacity-40 z-10"
+            className="absolute lg:bottom-0 lg:w-[300px] lg:h-[250px] w-[113px] h-[103px] sm:h-[213px] sm:w-[203px] lg:right-0 right-12 bottom-44 opacity-40 z-10"
           />
           <img
             ref={image4Ref}
             src="https://s3-alpha-sig.figma.com/img/396a/c52d/77798a6dd8fba3279527adfc010b6879?Expires=1694390400&Signature=ehRif3nIue5aNBp6oUrdVEpf2~5NKL7kXxA1ny9ttZDhPbUjL4A3ZDJ9EqpGNnRiuX6wiUW-mgxGWSHqGZG3yY~aAJbjUsO2KtattMp7lPjToPweo3kCquvNZw-F~gncgWgnU58uk28KfMUTkx4mQ9huufsCL~xmcgGrM-wQCBQrGT-4xkVQmxm7l3-JdVSMrf70G8Xsq4dPcUAEmC7WeWVrcPAJ6HRzdlbNrKv8EwrIcM2FrY5QdF8VFuAMSdsDmDJ4t-JNFT~-gkoFqg-t6LD5FEK5in7SHU-tRGX6KLS~mQnhy5sNyEBimdQV5oQ~j6xRRo03bX6Unj~bQmE5~g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
             alt=""
-            className="absolute lg:bottom-[-120px]  lg:right-56 opacity-40 lg:w-[300px] lg:h-[250px] z-10 h-[84px] w-[84px] bottom-24"
+            className="absolute lg:bottom-[-120px]  lg:right-56 opacity-40 lg:w-[280px] lg:h-[220px] z-10 h-[84px] w-[84px] bottom-24"
           />
           <img
             ref={image8Ref}
             src="https://s3-alpha-sig.figma.com/img/396a/c52d/77798a6dd8fba3279527adfc010b6879?Expires=1694390400&Signature=ehRif3nIue5aNBp6oUrdVEpf2~5NKL7kXxA1ny9ttZDhPbUjL4A3ZDJ9EqpGNnRiuX6wiUW-mgxGWSHqGZG3yY~aAJbjUsO2KtattMp7lPjToPweo3kCquvNZw-F~gncgWgnU58uk28KfMUTkx4mQ9huufsCL~xmcgGrM-wQCBQrGT-4xkVQmxm7l3-JdVSMrf70G8Xsq4dPcUAEmC7WeWVrcPAJ6HRzdlbNrKv8EwrIcM2FrY5QdF8VFuAMSdsDmDJ4t-JNFT~-gkoFqg-t6LD5FEK5in7SHU-tRGX6KLS~mQnhy5sNyEBimdQV5oQ~j6xRRo03bX6Unj~bQmE5~g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
             alt=""
-            className="absolute lg:bottom-[-120px] right-72  lg:right-96 opacity-40 lg:w-[300px] lg:h-[250px] z-10 h-[84px] w-[84px] bottom-24"
+            className="absolute lg:bottom-[-120px] right-72  lg:right-28 opacity-40 lg:w-[270px] lg:h-[210px] z-10 h-[84px] w-[84px] bottom-24"
           />
           <img
             ref={image6Ref}
             src="https://s3-alpha-sig.figma.com/img/396a/c52d/77798a6dd8fba3279527adfc010b6879?Expires=1694390400&Signature=ehRif3nIue5aNBp6oUrdVEpf2~5NKL7kXxA1ny9ttZDhPbUjL4A3ZDJ9EqpGNnRiuX6wiUW-mgxGWSHqGZG3yY~aAJbjUsO2KtattMp7lPjToPweo3kCquvNZw-F~gncgWgnU58uk28KfMUTkx4mQ9huufsCL~xmcgGrM-wQCBQrGT-4xkVQmxm7l3-JdVSMrf70G8Xsq4dPcUAEmC7WeWVrcPAJ6HRzdlbNrKv8EwrIcM2FrY5QdF8VFuAMSdsDmDJ4t-JNFT~-gkoFqg-t6LD5FEK5in7SHU-tRGX6KLS~mQnhy5sNyEBimdQV5oQ~j6xRRo03bX6Unj~bQmE5~g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
             alt=""
-            className="absolute lg:bottom-[-120px]  right-0 lg:right-0 opacity-40 lg:w-[300px] lg:h-[250px] z-10 h-[84px] w-[84px] bottom-24"
+            className="absolute lg:bottom-[-120px]  right-0 lg:right-0 opacity-40 lg:w-[260px] lg:h-[230px] z-10 h-[84px] w-[84px] bottom-24"
           />
         </div>
         {/* pub */}

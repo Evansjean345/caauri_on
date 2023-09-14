@@ -10,6 +10,10 @@
   #caauri_home_animation {
     background-color: black;
     margin-top: 64px;
+    width: 89%;
+    margin-left: 20px;
+    height: 200px;
+    margin-top: 15px;
   }
   #logo_wide {
     visibility: hidden;

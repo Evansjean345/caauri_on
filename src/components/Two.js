@@ -100,14 +100,14 @@ export default function Two() {
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration="1800"
-          className="w-full px-8 xl:font-semibold font-bold text-4xl md:text-6xl  sm:text-5xl xl:text-7xl xl:leading-[85px]"
+          className="w-full px-8 sm:px-0 pl-0 sm:pl-40 xl:font-semibold font-bold text-4xl md:text-6xl  sm:text-5xl xl:text-7xl xl:leading-[85px]"
         >
           Tout commence
           <br />
           Par <br />
           compétences
         </div>
-        <div className="flex w-full md:mt-20 mt-16">
+        <div className="flex w-full md:mt-6 mt-16">
           <div className="w-1/2 "></div>
           <div
             data-aos="fade-up"
@@ -143,17 +143,17 @@ export default function Two() {
       </div>
       {/* Second section */}
       <div>
-        <div className="w-full h-[50vh] sm:h-[100vh]">
+        <div className="w-full h-[50vh] sm:h-[85vh] ">
           <img
             src="/images/mockup.jpg"
             alt=""
-            className="max-w-full h-full ml-auto mr-auto block"
+            className="max-w-full h-full ml-auto mr-auto block bg-white"
           />
         </div>
       </div>
       {/** Three section */}
       <div className="bg-black h-[100vh] sm:h-[140vh]">
-        <div className="flex justify-between sm:px-12 px-3 py-12">
+        <div className="flex justify-between sm:px-12 px-3 xl:px-28 py-12">
           <div className="flex flex-col justify-center items-center">
             <span className="text-xs font-thin sm:text-sm text-white sm:pl-2">
               CLIENTELE
@@ -380,17 +380,17 @@ export default function Two() {
         </div>
       </div>
       {/* Section 4 */}
-      <div className="w-full h-[70vh] bg-gradient-to-r from-black  sm:h-[70vh] flex flex-col items-start justify-start sm:mt-44 mt-20 px-8 sm:px-0 sm:pl-20">
+      <div className="w-full h-[70vh] bg-gradient-to-r from-black  sm:h-[100vh] flex flex-col items-start justify-start sm:mt-44 mt-20 px-8 sm:px-0 sm:pl-20">
         <span className="xl:font-semibold font-bold text-4xl md:text-6xl  text-[#F99B40] sm:text-5xl xl:text-8xl xl:leading-[85px] pt-12">
           Event pro
         </span>
-        <p className="flex justify-start items-start text-start mt-8 sm:w-[450px] text-white text-sm sm:text-xl">
+        <p className="flex justify-start items-start text-start mt-8 sm:mt-20 sm:w-[450px] text-white text-sm sm:text-xl">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam
           provident vero suscipit perspiciatis nesciunt nam? Repellendus dolorum
           architecto eius minus blanditiis exercitationem, laudantium qui ullam
           cum veniam, id magnam similique?
         </p>
-        <ul className="flex mt-8 flex-col sm:flex-row">
+        <ul className="flex mt-8 sm:mt-20 flex-col xl:flex-row">
           <li>
             <div className="flex space-x-2">
               <div className="sm:w-[10px] sm:h-[10px] h-[7px] w-[7px] mt-2 rounded-[100px] bg-white"></div>
