@@ -224,7 +224,7 @@ export default function SectionHome() {
       <div className="bg-white text-black">
         {/* Acceuil */}
         <div
-          className={"flex w-full  flex-shrink relative pt-32 lg:pt-28"}
+          className={"flex w-full  flex-shrink relative pt-24 lg:pt-28"}
           id="caauri_home_section"
           style={style}
         >
@@ -283,11 +283,11 @@ export default function SectionHome() {
             <img
               src="/logo/caauri_white.png"
               alt=""
-              className="anime_text 2xl:h-[400px] sm:h-[300px] h-[180px]   sm:w-[200px] absolute top-16 md:top-[235px]"
+              className="anime_text 2xl:h-[400px] sm:h-[300px] h-[100px]   sm:w-[200px] absolute top-10 md:top-[235px]"
               ref={(el) => elements.current.push(el)}
             />
             <span
-              className="anime_text text-white text-center text-4xl sm:text-6xl font-bold absolute top-24 block sm:top-[295px]"
+              className="anime_text text-white text-center text-2xl sm:text-6xl font-bold absolute top-16 block sm:top-[295px]"
               ref={(el) => elements.current.push(el)}
             >
               LANCE TON
@@ -295,7 +295,7 @@ export default function SectionHome() {
               CAAURI
             </span>
             <span
-              className="anime_text text-white text-center text-4xl sm:text-6xl font-bold absolute top-24 block sm:top-[295px]"
+              className="anime_text text-white text-center text-2xl sm:text-6xl font-bold absolute top-16 block sm:top-[295px]"
               ref={(el) => elements.current.push(el)}
             >
               LANCE TON
@@ -303,7 +303,7 @@ export default function SectionHome() {
               BUSINESS
             </span>
             <span
-              className="anime_text text-white text-center text-4xl sm:text-6xl font-bold absolute top-24 block sm:top-[295px]"
+              className="anime_text text-white text-center text-2xl sm:text-6xl font-bold absolute top-16 block sm:top-[295px]"
               ref={(el) => elements.current.push(el)}
             >
               LANCE TON
