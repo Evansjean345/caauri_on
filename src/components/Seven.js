@@ -43,7 +43,7 @@ export default function Seven() {
       </div>
       {/* Section recrutement */}
       <div>
-        <div className="flex justify-center items-center flex-col mt-32 space-y-2">
+        <div className="flex justify-center items-center flex-col mt-16 sm:mt-32 space-y-2">
           <span
             data-aos="fade-down"
             data-aos-easing="linear"
@@ -65,7 +65,7 @@ export default function Seven() {
           {/* Carreer */}
           <span className="mt-3"></span>
 
-          <div className="flex flex-col space-y-12 font-thin w-full justify-center items-center">
+          <div className="flex flex-col space-y-12 font-thin w-full justify-center items-center sm:px-0 px-8">
             <div className="flex flex-col sm:w-[60%]  text-white py-4 px-3 bg-[#404040] rounded-lg">
               <div className="justify-between  flex">
                 <div className=" w-2/6 flex justify-center font-medium sm:font-normal text-sm sm:text-xl items-center">

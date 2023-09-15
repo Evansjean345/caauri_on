@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar({ onMenuChange }) {
@@ -7,19 +7,42 @@ export default function Navbar({ onMenuChange }) {
     setMenu(!menu);
     onMenuChange(!menu);
   };
+  //aniamtion de la Navbar
+  const [scrolling, setScrolling] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      setScrolling(prevScrollPos < currentScrollPos); // Modifié ici
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
+
+  const navbarStyle = {
+    transition: "top 0.3s",
+    top: scrolling ? "-65px" : "0",
+    backdropFilter: "blur(5px)",
+    background: " rgba(255, 255, 255, 0.20)",
+  };
   return (
     <div
-      style={{
-        backdropFilter: "blur(5px)",
-        background: " rgba(255, 255, 255, 0.20)",
-      }}
+      style={navbarStyle}
       className="fixed w-full  h-[65px] z-50 text-black "
     >
       <div className="w-full flex z-50 py-0 px-5  sm:px-20 justify-between">
         <div className="w-1/2 flex items-center  sm:mt-[3px]">
-        {
-          menu ? <img src="/logo/logo_black_text.png" alt="" className="h-11"    /> : ""
-        }
+          {menu ? (
+            <img src="/logo/logo_black_text.png" alt="" className="h-11" />
+          ) : (
+            ""
+          )}
         </div>
         <div className="w-1/2 transition-all  relative  flex items-center  justify-end  gap-x-2">
           <div

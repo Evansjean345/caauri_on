@@ -649,7 +649,7 @@ export default function SectionHome() {
           </svg>
         </div>
         {/* Scroll section */}
-        <div className="w-full sm:h-[100vh] sm:bg-contain flex flex-col mt-52 px-2 ">
+        <div className="w-full sm:h-[100vh] sm:bg-contain flex flex-col mt-20 sm:mt-52 px-2 ">
           {/*
           <div className="flex justify-between">
             <img
@@ -665,22 +665,22 @@ export default function SectionHome() {
               ref={imageRef2}
             />
           </div> */}
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col  items-center justify-center">
             <span className="text-3xl text-center sm:text-4xl md:text-5xl xl:text-7xl">
               Agence de publicité digitale
             </span>
-            <p className="mt-12 text-center sm:text-lg md:text-2xl">
+            <p className="mt-12 text-[#666666] text-start px-4 sm:px-0 sm:text-center  sm:text-lg md:text-2xl">
               Notre Agence de publicité digitale est votre partenaire de
               confiance pour propulser votre <br className="sm:block hidden" />
               présence en ligne vers de nouveaux sommets
             </p>
-            <p className="mt-6 text-center sm:text-lg md:text-2xl">
+            <p className="mt-6 text-[#666666] text-start px-4 sm:px-0 sm:text-center sm:text-lg md:text-2xl">
               Nous ne contentons pas seulement de créer des identités
               fantaisistes et des sites <br className="sm:block hidden" />
               Web. Notre mission est de vous aider à réaliser votre voyage
               ambitieux
             </p>
-            <p className="mt-6 text-center sm:text-lg md:text-2xl">
+            <p className="mt-6 text-[#666666] text-start px-4 sm:px-0 sm:text-center sm:text-lg md:text-2xl">
               Nous faisons avancer votre vision de marque et établissons les
               bases solides avec les bons <br className="sm:block hidden" />
               outils pour une croissance à long terme

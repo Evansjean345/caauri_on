@@ -28,7 +28,7 @@ export default function Three() {
       </div>
       {/* button section computer version */}
       <div className="lg:pl-24 lg:mt-14 sm:px-12 px-6">
-        <span className="text-3xl text-black font-thin sm:font-normal pl-2">
+        <span className="text-3xl text-black font-thin sm:font-normal sm:pl-2">
           Catégories
         </span>
         <ul className="lg:flex space-x-6 mt-3 list-outside hidden">
@@ -153,17 +153,17 @@ export default function Three() {
           <div className="flex top-0 left-1 sm:left-24 md:left-36 lg:hidden z-20 absolute">
             <ul className="flex space-x-2 sm:space-x-6 mt-3  list-outside">
               <li>
-                <div className="border-white text-sm sm:font-medium text-white border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
+                <div className="border-white bg-white  sm:bg-none text-sm sm:font-medium text-black border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
                   Refonte
                 </div>
               </li>
               <li>
-                <div className="border-white text-sm sm:font-medium text-white border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
+                <div className="border-white text-sm sm:font-medium bg-white  sm:bg-none text-black border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
                   Website
                 </div>
               </li>
               <li>
-                <div className="border-white text-sm sm:font-medium text-white border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
+                <div className="border-white text-sm sm:font-medium bg-white  sm:bg-none text-black border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
                   BTP
                 </div>
               </li>
@@ -230,17 +230,17 @@ export default function Three() {
           <div className="flex top-0 left-1 sm:left-24 md:left-36 lg:hidden z-20 absolute">
             <ul className="flex space-x-2 sm:space-x-6 mt-3  list-outside">
               <li>
-                <div className="border-white text-sm sm:font-medium text-white border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
+                <div className="border-white text-sm sm:font-medium text-black bg-white  sm:bg-none border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
                   Refonte
                 </div>
               </li>
               <li>
-                <div className="border-white text-sm sm:font-medium text-white border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
+                <div className="border-white text-sm sm:font-medium text-black bg-white  sm:bg-none border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
                   Website
                 </div>
               </li>
               <li>
-                <div className="border-white text-sm sm:font-medium text-white border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
+                <div className="border-white text-sm sm:font-medium text-black bg-white  sm:bg-none border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
                   BTP
                 </div>
               </li>
@@ -307,17 +307,17 @@ export default function Three() {
           <div className="flex top-0 left-1 sm:left-24 md:left-36 lg:hidden z-20 absolute">
             <ul className="flex space-x-2 sm:space-x-6 mt-3  list-outside">
               <li>
-                <div className="border-white text-sm sm:font-medium text-white border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
+                <div className="border-white text-sm sm:font-medium text-black bg-white  sm:bg-none border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
                   Refonte
                 </div>
               </li>
               <li>
-                <div className="border-white text-sm sm:font-medium text-white border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
+                <div className="border-white text-sm sm:font-medium text-black bg-white  sm:bg-none border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
                   Website
                 </div>
               </li>
               <li>
-                <div className="border-white text-sm sm:font-medium text-white border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
+                <div className="border-white text-sm sm:font-medium text-black bg-white  sm:bg-none border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
                   BTP
                 </div>
               </li>
@@ -384,17 +384,17 @@ export default function Three() {
           <div className="flex top-0 left-1 sm:left-24 md:left-36 lg:hidden z-20 absolute">
             <ul className="flex space-x-2 sm:space-x-6 mt-3  list-outside">
               <li>
-                <div className="border-white text-sm sm:font-medium text-white border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
+                <div className="border-white text-sm sm:font-medium text-black bg-white  sm:bg-none border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
                   Refonte
                 </div>
               </li>
               <li>
-                <div className="border-white text-sm sm:font-medium text-white border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
+                <div className="border-white text-sm sm:font-medium text-black bg-white  sm:bg-none border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
                   Website
                 </div>
               </li>
               <li>
-                <div className="border-white text-sm sm:font-medium text-white border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
+                <div className="border-white text-sm sm:font-medium text-black bg-white  sm:bg-none border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
                   BTP
                 </div>
               </li>

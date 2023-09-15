@@ -45,7 +45,7 @@ export default function Prefooter() {
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration="3000"
-          className="mt-5 sm:font-medium cursor-pointer  flex  gap-0 py-4 items-center justify-center bg-black  transition-all px-2   text-white rounded-l-full rounded-r-full"
+          className="mt-5 sm:font-medium cursor-pointer  flex  px-4 gap-0 py-4 items-center justify-center bg-black  transition-all sm:px-2   text-white rounded-l-full rounded-r-full"
         >
           <div>Discutons</div>
           <div className="bg-black rounded-b-full w-6  transition-all flex items-center justify-center rounded-l-full">
