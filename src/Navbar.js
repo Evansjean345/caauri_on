@@ -134,7 +134,7 @@ export default function Navbar({ onMenuChange }) {
             </li>
             <li className="sm:text-4xl text-3xl font-normal sm:font-normal sm:hover:translate-x-8  sm:hover:translate-y-[-10px] sm:hover:font-medium mt-3 sm:mt-2 sm:hover:text-4xl transition-all cursor-pointer">
               <Link to="/caaurimuniquez" onClick={changeMenu}>
-                Caaurimuquez
+                Caaurimuniquez
               </Link>
             </li>
             <li className="sm:text-4xl text-3xl font-normal sm:font-normal sm:hover:translate-x-8  sm:hover:translate-y-[-10px] sm:hover:font-medium mt-3 sm:mt-2 sm:hover:text-4xl transition-all cursor-pointer">

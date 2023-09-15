@@ -239,7 +239,7 @@ export default function SectionHome() {
                   data-aos-duration="1700"
                   className="mt-8 sm:font-medium   cursor-pointer flex w-[180px] gap-5 py-4 hover:flex hover:items-center hover:justify-center hover:gap-0 hover:bg-black  transition-all px-2   hover:text-white hover:rounded-l-full hover:rounded-r-full"
                 >
-                  <div>Caaurimuquez</div>
+                  <div>Caaurimuniquez</div>
                   <div className="bg-black rounded-b-full w-6 sm:hover:mt-1 transition-all flex items-center justify-center rounded-l-full">
                     <img src="/logo/frame.svg" alt="" />
                   </div>
@@ -299,7 +299,7 @@ export default function SectionHome() {
             </p>
             <span className="w-full flex  items-center justify-center">
               <div className="mt-8 sm:font-medium text-white flex w-[180px] gap-0 py-4 items-center justify-center bg-black  transition-all px-2    rounded-l-full rounded-r-full">
-                <div>Caaurimuquez</div>
+                <div>Caaurimuniquez</div>
                 <div className="bg-black rounded-b-full w-6  transition-all flex items-center justify-center rounded-l-full">
                   <img src="/logo/frame.svg" alt="" />
                 </div>
