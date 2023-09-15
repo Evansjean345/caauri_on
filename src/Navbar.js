@@ -70,7 +70,7 @@ export default function Navbar({ onMenuChange }) {
         className={
           menu
             ? "hidden"
-            : "absolute z-50 top-4  sm:right-[24px] right-2  sm:top-[24px] rounded-3xl shadow-2xl bg-white py-2 sm:py-0 w-[95%] h-[75vh] sm:w-[441px] sm:h-[558px]"
+            : "absolute z-50 top-4  sm:right-[24px] right-2  sm:top-[24px] rounded-3xl shadow-2xl bg-white py-2 sm:py-0 w-[95%] h-[79vh] sm:w-[441px] sm:h-[558px]"
         }
       >
         <div className="w-full flex items-center mt-2 px-4 sm:px-6  justify-between">
