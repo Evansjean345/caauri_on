@@ -100,7 +100,7 @@ export default function Two() {
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration="1800"
-          className="w-full px-8 sm:px-0 pl-0 sm:pl-40 xl:font-semibold font-bold text-4xl md:text-6xl  sm:text-5xl xl:text-7xl xl:leading-[85px]"
+          className="w-full px-8 sm:px-0 pl-0 sm:pl-44 xl:font-semibold font-bold text-4xl md:text-6xl  sm:text-5xl xl:text-7xl xl:leading-[85px]"
         >
           Tout commence
           <br />
@@ -113,7 +113,7 @@ export default function Two() {
             data-aos="fade-up"
             data-aos-easing="linear"
             data-aos-duration="2500"
-            className="w-full md:px-0 px-8 md:pl-0  sm:px-24 md:w-1/2 font-medium sm:font-normal text-sm md:text-4xl md:pr-32 text-black"
+            className="w-full md:px-0 px-8 md:pl-0  sm:px-24 md:w-1/2 font-medium sm:font-normal text-sm md:text-4xl md:pr-44 text-black"
           >
             Agence curieuse, toujours en train de s'adapter et évoluant avec le
             temps, et c'est ce qui fait nos créations vraiment spécial.
@@ -143,9 +143,9 @@ export default function Two() {
       </div>
       {/* Second section */}
       <div>
-        <div className="w-full h-[50vh] sm:h-[85vh] ">
+        <div className="w-full h-[50vh] sm:h-[72vh]">
           <img
-            src="/images/mockup.jpg"
+            src="/images/mac.jpg"
             alt=""
             className="max-w-full h-full ml-auto mr-auto block bg-white"
           />
@@ -208,21 +208,21 @@ export default function Two() {
         </div>
       </div>
       {/* Four Section */}
-      <div className="sm:h-[120vh] h-[110vh] mt-20">
+      <div className="sm:h-[120vh] h-[110vh] mt-24 sm:mt-52">
         <div className="flex sm:flex-row flex-col">
           <div className="sm:w-1/2 flex flex-col">
-            <span className="px-8 text-black xl:font-semibold font-bold text-4xl md:text-6xl  sm:text-5xl xl:text-7xl xl:leading-[85px]">
+            <span className="px-8 xl:px-20 text-black xl:font-semibold font-bold text-4xl md:text-6xl  sm:text-5xl xl:text-7xl xl:leading-[85px]">
               Web & <br />
               Développement
             </span>
-            <span className="mt-6 px-8 sm:font-medium font-normal text-sm md:text-xl  text-black">
+            <span className="mt-6 px-8 xl:px-20 sm:font-medium font-normal text-sm md:text-xl  text-black">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
               voluptas magnam beatae doloribus architecto nisi odit consequuntur
               sit error rerum, provident eius maxime non, porro natus fugiat
               inventore voluptatem a.
             </span>
           </div>
-          <div className="sm:w-1/2 px-8 py-8 sm:py-0 sm:px-0 h-[431px]">
+          <div className="sm:w-1/2 px-8 py-8 sm:py-0 sm:px-8 xl:px-20 h-[431px]">
             {showA ? (
               <img
                 src="https://s3-alpha-sig.figma.com/img/06eb/17d3/bd41d8efd0be9dba35553e67536d6df7?Expires=1694995200&Signature=Nj8BqiNtY1x-UaCAAcECyuN6D6WV7VKm8EuP0HrnZymX0s2-MUBVeX1L-tuvfo4VQwuIKv8kh7dkkokocPVQ2GPBOMRM4aXdSPIXIyg4z3AbydvyL-3JsbTKgsq59jNjkJ1TND3pV4dlKebqb1EaO6Hh2-j7tDQo7fg54~LtGyWKywgoHYZH-ohxOIPTVa2zqJirFdlJ-AzmMe5IZUevYGy5wN4TlbycedVFC-IVtq-y9lC9nigUXNo31jLcq2fYbRMdfR7ZLdQaNUQc~ckDY~KWXu98JzZa5ecfeG0X2kqSbUK8FyPpKe0xyq-jnK-UtpSOS3B2awh-PjYmQtc5mA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
@@ -253,7 +253,7 @@ export default function Two() {
             ) : null}
           </div>
         </div>
-        <div className="flex mt-6 sm:mt-20 gap-6 px-8 sm:gap-12 justify-evenly">
+        <div className="flex mt-6 sm:mt-20 gap-6 px-8 xl:px-20 sm:gap-10 justify-evenly">
           <div className="w-1/4 flex flex-col ">
             <span className="font-medium sm:text-base text-xs">01</span>
             <p className="mt-2 font-medium sm:text-base text-xs">
@@ -322,7 +322,7 @@ export default function Two() {
             Formation
           </span>
         </div>
-        <div className="w-full flex pt-44 2xl:pt-12">
+        <div className="w-full flex pt-44 xl:px-20 2xl:pt-12">
           <div className="w-1/4 flex border-r  flex-col justify-center items-center h-[233px] p-1 md:p-7">
             <span className="md:text-2xl text-[#F99B40]  text-xs text-center md:text-start font-semibold">
               CONCEPTION WEB
@@ -330,8 +330,7 @@ export default function Two() {
             <p className="mt-8 text-white text-xs font-thin md:text-base lg:text-xl text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
               nobis, deleniti ut, similique inventore ullam modi quas,
-              perspiciatis cumque nemo perferendis repudiandae odio totam.
-              Adipisci eos repudiandae distinctio dolorum possimus?
+              perspiciatis cumque nemo perferendis
             </p>
           </div>
           <div className="w-1/4 flex flex-col border-r  justify-center items-center h-[233px] p-1 md:p-7">
@@ -341,8 +340,7 @@ export default function Two() {
             <p className="mt-8 text-white text-xs  font-thin md:text-base lg:text-xl text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
               nobis, deleniti ut, similique inventore ullam modi quas,
-              perspiciatis cumque nemo perferendis repudiandae odio totam.
-              Adipisci eos repudiandae distinctio dolorum possimus?
+              perspiciatis cumque nemo perferendis
             </p>
           </div>
           <div className="w-1/4 flex flex-col border-r justify-center items-center h-[233px] p-1 md:p-7">
@@ -352,8 +350,7 @@ export default function Two() {
             <p className="mt-8 text-white text-xs font-thin  md:text-base lg:text-xl text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
               nobis, deleniti ut, similique inventore ullam modi quas,
-              perspiciatis cumque nemo perferendis repudiandae odio totam.
-              Adipisci eos repudiandae distinctio dolorum possimus?
+              perspiciatis cumque nemo perferendis
             </p>
           </div>
           <div className="w-1/4 flex flex-col justify-center  items-center h-[233px] p-1 md:p-7">
@@ -363,12 +360,11 @@ export default function Two() {
             <p className="mt-8 text-white text-xs md:text-base font-thin lg:text-xl text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
               nobis, deleniti ut, similique inventore ullam modi quas,
-              perspiciatis cumque nemo perferendis repudiandae odio totam.
-              Adipisci eos repudiandae distinctio dolorum possimus?
+              perspiciatis cumque nemo perferendis
             </p>
           </div>
         </div>
-        <div className="w-full flex justify-center pt-24 md:pt-56 lg:pt-24 xl:pt-24 2xl:pt-24  items-center">
+        <div className="w-full flex justify-center pt-24 md:pt-56 lg:pt-24 xl:pt-20 2xl:pt-20  items-center">
           <span className="group">
             <div className="mt-5 flex gap-5 hover:flex hover:justify-center cursor-pointer hover:items-center hover:gap-0 py-4 group-hover:bg-white   transition-all px-2   group-hover:text-black rounded-l-full rounded-r-full hover:rounded-l-full hover:rounded-r-full">
               <div className="text-white group-hover:text-black">Discutons</div>
@@ -380,17 +376,17 @@ export default function Two() {
         </div>
       </div>
       {/* Section 4 */}
-      <div className="w-full h-[70vh] bg-gradient-to-r from-black  sm:h-[100vh] flex flex-col items-start justify-start sm:mt-44 mt-20 px-8 sm:px-0 sm:pl-20">
+      <div className="w-full h-[70vh] bg-gradient-to-r from-black  sm:h-[100vh] flex flex-col items-start justify-start  px-8 sm:px-0 sm:pl-20">
         <span className="xl:font-semibold font-bold text-4xl md:text-6xl  text-[#F99B40] sm:text-5xl xl:text-8xl xl:leading-[85px] pt-12">
           Event pro
         </span>
-        <p className="flex justify-start items-start text-start mt-8 sm:mt-20 sm:w-[450px] text-white text-sm sm:text-xl">
+        <p className="flex justify-start items-start text-start mt-8 sm:mt-32 sm:w-[450px] text-white text-sm sm:text-xl">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam
           provident vero suscipit perspiciatis nesciunt nam? Repellendus dolorum
           architecto eius minus blanditiis exercitationem, laudantium qui ullam
           cum veniam, id magnam similique?
         </p>
-        <ul className="flex mt-8 sm:mt-20 flex-col xl:flex-row">
+        <ul className="flex mt-8 sm:mt-8 flex-col xl:flex-row">
           <li>
             <div className="flex space-x-2">
               <div className="sm:w-[10px] sm:h-[10px] h-[7px] w-[7px] mt-2 rounded-[100px] bg-white"></div>

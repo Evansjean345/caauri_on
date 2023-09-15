@@ -150,26 +150,6 @@ export default function SectionHome() {
           },
         }
       );
-
-      // Animation pour déplacer les images 3 et 4
-      gsap.fromTo(
-        [image3, image4],
-        {
-          y: 0,
-          opacity: 0.1,
-        },
-        {
-          y: -100 * 4.5,
-          opacity: 1,
-          duration: 0.9,
-          scrollTrigger: {
-            trigger: section,
-            start: "top center",
-            end: "bottom center",
-            scrub: true,
-          },
-        }
-      );
     };
 
     const animeImagesTwo = () => {
@@ -201,7 +181,7 @@ export default function SectionHome() {
           opacity: 0.1,
         },
         {
-          y: -100 * 2.1,
+          y: -100 * 2.5,
           opacity: 1,
           duration: 0.9,
           scrollTrigger: {
@@ -607,47 +587,69 @@ export default function SectionHome() {
               </div>
             </div>
           </div>
-          <div className="2xl:flex justify-center items-center w-full hidden">
-            <div className="flex justify-center flex-col">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="459"
-                height="55"
-                viewBox="0 0 459 55"
-                fill="none"
-              >
-                <path
-                  d="M457.955 54.2839C453.4 41.9627 441.536 33.1772 427.624 33.1772H39.6583C20.2899 33.1772 4.19366 19.1126 1.03906 0.640625"
-                  stroke="#DFD4C0"
-                  stroke-width="1.95937"
+          <svg
+            height="69"
+            viewBox="0 0 925 69"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="remove_div w-full"
+          >
+            <g clip-path="url(#clip0_826_5652)">
+              <path
+                d="M462.955 60.2839C458.4 47.9627 446.536 39.1772 432.624 39.1772H44.6583C25.2899 39.1772 9.19366 25.1126 6.03906 6.64062"
+                stroke="#DFD4C0"
+                stroke-width="1.95937"
+              />
+              <path
+                d="M356.199 39.1772H338.565C319.568 39.1772 303.805 25.3183 300.856 7.15967"
+                stroke="#DFD4C0"
+                stroke-width="1.95937"
+              />
+              <path
+                d="M462.045 60.2839C466.6 47.9627 478.464 39.1772 492.376 39.1772H880.332C899.534 39.1772 915.513 25.3673 918.873 7.1499"
+                stroke="#DFD4C0"
+                stroke-width="1.95937"
+              />
+              <path
+                d="M568.791 39.1772H586.425C605.422 39.1772 621.185 25.3085 624.134 7.1499"
+                stroke="#DFD4C0"
+                stroke-width="1.95937"
+              />
+              <path
+                d="M462.495 68.5601L456.137 57.5415H468.863L462.505 68.5601H462.495Z"
+                fill="#DFD4C0"
+              />
+              <path
+                d="M301.826 0L308.184 11.0186H295.458L301.816 0H301.826Z"
+                fill="#DFD4C0"
+              />
+              <path
+                d="M623.164 0L629.522 11.0186H616.796L623.154 0H623.164Z"
+                fill="#DFD4C0"
+              />
+              <path
+                d="M918.05 0L924.418 11.0186H911.682L918.05 0Z"
+                fill="#DFD4C0"
+              />
+              <path
+                d="M6.9402 0L13.2984 11.0186H0.582031L6.9402 0Z"
+                fill="#DFD4C0"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_826_5652">
+                <rect
+                  width="924"
+                  height="68.56"
+                  fill="white"
+                  transform="translate(0.5)"
                 />
-              </svg>
-            </div>
-            <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="459"
-                height="55"
-                viewBox="0 0 459 55"
-                fill="none"
-              >
-                <path
-                  d="M1.04492 54.2834C5.60047 41.9622 17.4645 33.1767 31.376 33.1767H419.332C438.534 33.1767 454.513 19.3668 457.873 1.14941"
-                  stroke="#DFD4C0"
-                  stroke-width="1.95937"
-                />
-              </svg>
-            </div>
-          </div>
+              </clipPath>
+            </defs>
+          </svg>
         </div>
         {/* Scroll section */}
-        <div
-          className="w-full sm:h-[100vh] sm:bg-contain flex flex-col mt-52 px-2 "
-          style={{
-            background: "url('/icon/animation.gif')",
-            backgroundPosition: "center",
-          }}
-        >
+        <div className="w-full sm:h-[100vh] sm:bg-contain flex flex-col mt-52 px-2 ">
           {/*
           <div className="flex justify-between">
             <img
@@ -742,51 +744,40 @@ export default function SectionHome() {
             ref={image1Ref}
             src="/images/pc.png"
             alt=""
-            className="absolute lg:bottom-0 bottom-[610px] left-12 opacity-40 lg:left-0 lg:w-[280px] lg:h-[220px] w-[113px] h-[103px] sm:h-[213px] sm:w-[203px]  z-10"
+            className="absolute lg:bottom-0 bottom-[610px] left-12 opacity-40 lg:left-12 lg:w-[250px] lg:h-[220px] w-[113px] h-[103px] sm:h-[213px] sm:w-[203px]  z-10"
           />
           <img
             ref={image7Ref}
             src="/images/pc.png"
             alt=""
-            className="absolute lg:bottom-0 bottom-[610px] left-24 opacity-40 lg:left-32 lg:w-[300px] lg:h-[220px] w-[113px] h-[103px] sm:h-[213px] sm:w-[203px]  z-10"
+            className="absolute lg:bottom-0 bottom-[610px] left-24 opacity-40 lg:left-32 lg:w-[250px] lg:h-[220px] w-[113px] h-[103px] sm:h-[213px] sm:w-[203px]  z-10"
           />
           <img
             ref={image5Ref}
             src="/images/pc.png"
             alt=""
-            className="absolute lg:bottom-0 bottom-[610px] left-24 opacity-40 lg:left-[250px] lg:w-[300px] lg:h-[220px] w-[113px] h-[103px] sm:h-[213px] sm:w-[203px]  z-10"
+            className="absolute lg:bottom-0 bottom-[610px] left-24 opacity-40 lg:left-[250px] lg:w-[250px] lg:h-[220px] w-[113px] h-[103px] sm:h-[213px] sm:w-[203px]  z-10"
           />
-          <img
-            ref={image3Ref}
-            src="https://s3-alpha-sig.figma.com/img/396a/c52d/77798a6dd8fba3279527adfc010b6879?Expires=1694390400&Signature=ehRif3nIue5aNBp6oUrdVEpf2~5NKL7kXxA1ny9ttZDhPbUjL4A3ZDJ9EqpGNnRiuX6wiUW-mgxGWSHqGZG3yY~aAJbjUsO2KtattMp7lPjToPweo3kCquvNZw-F~gncgWgnU58uk28KfMUTkx4mQ9huufsCL~xmcgGrM-wQCBQrGT-4xkVQmxm7l3-JdVSMrf70G8Xsq4dPcUAEmC7WeWVrcPAJ6HRzdlbNrKv8EwrIcM2FrY5QdF8VFuAMSdsDmDJ4t-JNFT~-gkoFqg-t6LD5FEK5in7SHU-tRGX6KLS~mQnhy5sNyEBimdQV5oQ~j6xRRo03bX6Unj~bQmE5~g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-            alt=""
-            className="absolute lg:bottom-[-120px] lg:left-56 sm:left-64 opacity-40 lg:w-[250px] lg:h-[200px] z-10 h-[84px] w-[84px] "
-          />
+
           {/* right */}
 
           <img
             ref={image2Ref}
             src="/images/pc.png"
             alt=""
-            className="absolute lg:bottom-0 lg:w-[300px] lg:h-[250px] w-[113px] h-[103px] sm:h-[213px] sm:w-[203px] lg:right-0 right-12 bottom-44 opacity-40 z-10"
-          />
-          <img
-            ref={image4Ref}
-            src="https://s3-alpha-sig.figma.com/img/396a/c52d/77798a6dd8fba3279527adfc010b6879?Expires=1694390400&Signature=ehRif3nIue5aNBp6oUrdVEpf2~5NKL7kXxA1ny9ttZDhPbUjL4A3ZDJ9EqpGNnRiuX6wiUW-mgxGWSHqGZG3yY~aAJbjUsO2KtattMp7lPjToPweo3kCquvNZw-F~gncgWgnU58uk28KfMUTkx4mQ9huufsCL~xmcgGrM-wQCBQrGT-4xkVQmxm7l3-JdVSMrf70G8Xsq4dPcUAEmC7WeWVrcPAJ6HRzdlbNrKv8EwrIcM2FrY5QdF8VFuAMSdsDmDJ4t-JNFT~-gkoFqg-t6LD5FEK5in7SHU-tRGX6KLS~mQnhy5sNyEBimdQV5oQ~j6xRRo03bX6Unj~bQmE5~g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-            alt=""
-            className="absolute lg:bottom-[-120px]  lg:right-56 opacity-40 lg:w-[280px] lg:h-[220px] z-10 h-[84px] w-[84px] bottom-24"
+            className="absolute lg:bottom-0 lg:w-[250px] lg:h-[220px] w-[113px] h-[103px] sm:h-[213px] sm:w-[203px] lg:right-12 right-12 bottom-44 opacity-40 z-10"
           />
           <img
             ref={image8Ref}
             src="https://s3-alpha-sig.figma.com/img/396a/c52d/77798a6dd8fba3279527adfc010b6879?Expires=1694390400&Signature=ehRif3nIue5aNBp6oUrdVEpf2~5NKL7kXxA1ny9ttZDhPbUjL4A3ZDJ9EqpGNnRiuX6wiUW-mgxGWSHqGZG3yY~aAJbjUsO2KtattMp7lPjToPweo3kCquvNZw-F~gncgWgnU58uk28KfMUTkx4mQ9huufsCL~xmcgGrM-wQCBQrGT-4xkVQmxm7l3-JdVSMrf70G8Xsq4dPcUAEmC7WeWVrcPAJ6HRzdlbNrKv8EwrIcM2FrY5QdF8VFuAMSdsDmDJ4t-JNFT~-gkoFqg-t6LD5FEK5in7SHU-tRGX6KLS~mQnhy5sNyEBimdQV5oQ~j6xRRo03bX6Unj~bQmE5~g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
             alt=""
-            className="absolute lg:bottom-[-120px] right-72  lg:right-28 opacity-40 lg:w-[270px] lg:h-[210px] z-10 h-[84px] w-[84px] bottom-24"
+            className="absolute lg:bottom-[-120px] right-72  lg:right-28 opacity-40 lg:w-[250px] lg:h-[220px] z-10 h-[84px] w-[84px] bottom-24"
           />
           <img
             ref={image6Ref}
             src="https://s3-alpha-sig.figma.com/img/396a/c52d/77798a6dd8fba3279527adfc010b6879?Expires=1694390400&Signature=ehRif3nIue5aNBp6oUrdVEpf2~5NKL7kXxA1ny9ttZDhPbUjL4A3ZDJ9EqpGNnRiuX6wiUW-mgxGWSHqGZG3yY~aAJbjUsO2KtattMp7lPjToPweo3kCquvNZw-F~gncgWgnU58uk28KfMUTkx4mQ9huufsCL~xmcgGrM-wQCBQrGT-4xkVQmxm7l3-JdVSMrf70G8Xsq4dPcUAEmC7WeWVrcPAJ6HRzdlbNrKv8EwrIcM2FrY5QdF8VFuAMSdsDmDJ4t-JNFT~-gkoFqg-t6LD5FEK5in7SHU-tRGX6KLS~mQnhy5sNyEBimdQV5oQ~j6xRRo03bX6Unj~bQmE5~g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
             alt=""
-            className="absolute lg:bottom-[-120px]  right-0 lg:right-0 opacity-40 lg:w-[260px] lg:h-[230px] z-10 h-[84px] w-[84px] bottom-24"
+            className="absolute lg:bottom-[-120px]  right-0 lg:right-56 opacity-40 lg:w-[250px] lg:h-[220px] z-10 h-[84px] w-[84px] bottom-24"
           />
         </div>
         {/* pub */}

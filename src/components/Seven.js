@@ -24,7 +24,7 @@ export default function Seven() {
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1500"
-          className="sm:text-7xl text-4xl sm:w-1/2 pl-8 sm:pl-10 flex justify-start "
+          className="sm:text-7xl text-4xl sm:w-1/2 pl-8 sm:pl-20 flex justify-start "
         >
           Caarrières Chez
           <br />

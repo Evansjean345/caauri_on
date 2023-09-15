@@ -11,7 +11,7 @@ export default function Five() {
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1500"
-          className="sm:text-7xl text-2xl w-1/2 pl-1 sm:pl-10 sm:block flex justify-start "
+          className="sm:text-7xl text-2xl w-1/2 pl-1 sm:pl-20 sm:block flex justify-start "
         >
           CAAURI BLOG
         </div>
@@ -19,7 +19,7 @@ export default function Five() {
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="2000"
-          className="w-1/2 text-xs sm:text-3xl pl-16   flex justify-center"
+          className="w-1/2 text-xs sm:text-3xl pl-16 sm:pr-20  flex justify-center"
         >
           Apprenez de nous, laissez vous divertir ou
           <br />

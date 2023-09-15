@@ -7,18 +7,27 @@ export default function Three() {
     <div className="bg-white text-black">
       {/* Heading */}
       <div className="flex justify-center font-semibold text-center text-5xl w-full px-6 sm:px-0 lg:text-8xl py-32 flex-col items-center">
-        <p>
+        <p
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="2000"
+          className="sm:mt-20"
+        >
           <span>Les</span>&nbsp;<span className="text-[#F2B749]">travaux</span>
           &nbsp;
           <span>que nous avons</span>
         </p>
-        <p>
+        <p
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="2500"
+        >
           <span className="text-[#F2B749]">réalisés</span>&nbsp;
           <span>jusqu'à présent</span>
         </p>
       </div>
       {/* button section computer version */}
-      <div className="lg:pl-24 lg:mt-24 sm:px-12 px-6">
+      <div className="lg:pl-24 lg:mt-14 sm:px-12 px-6">
         <span className="text-3xl text-black font-thin sm:font-normal pl-2">
           Catégories
         </span>
@@ -135,7 +144,7 @@ export default function Three() {
             <img src="/icon/arrow_empty.svg" alt="" />
           </div>
         </div>
-        <div className="w-full lg:block flex items-center justify-center lg:order-2 order-1 lg:w-1/2 bg-blue-50 mt-8 relative">
+        <div className="w-full lg:block flex items-center justify-center lg:order-2 order-1 lg:w-1/2  mt-8 relative">
           <img
             src="/images/img_tec.png"
             alt=""
@@ -212,7 +221,7 @@ export default function Three() {
             <img src="/icon/arrow_empty.svg" alt="" />
           </div>
         </div>
-        <div className="w-full lg:block flex items-center justify-center lg:order-2 order-1 lg:w-1/2 bg-blue-50 mt-8 relative">
+        <div className="w-full lg:block flex items-center justify-center lg:order-2 order-1 lg:w-1/2  mt-8 relative">
           <img
             src="/images/img_tec.png"
             alt=""
@@ -289,7 +298,7 @@ export default function Three() {
             <img src="/icon/arrow_empty.svg" alt="" />
           </div>
         </div>
-        <div className="w-full lg:block flex items-center justify-center lg:order-2 order-1 lg:w-1/2 bg-blue-50 mt-8 relative">
+        <div className="w-full lg:block flex items-center justify-center lg:order-2 order-1 lg:w-1/2  mt-8 relative">
           <img
             src="/images/img_tec.png"
             alt=""
@@ -366,7 +375,7 @@ export default function Three() {
             <img src="/icon/arrow_empty.svg" alt="" />
           </div>
         </div>
-        <div className="w-full lg:block flex items-center justify-center lg:order-2 order-1 lg:w-1/2 bg-blue-50 mt-8 relative">
+        <div className="w-full lg:block flex items-center justify-center lg:order-2 order-1 lg:w-1/2  mt-8 relative">
           <img
             src="/images/img_tec.png"
             alt=""

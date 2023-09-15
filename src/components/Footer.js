@@ -7,19 +7,19 @@ export default function Footer() {
         <img src="/logo/logo_white.png" alt="" />
       </div>
       {/* Footer item */}
-      <div className=" mt-6 w-full flex justify-center items-start flex-col lg:flex-row px-6 sm:px-12 lg:px-24">
+      <div className=" mt-6 w-full flex justify-center items-start flex-col lg:flex-row px-6 sm:px-12 lg:px-20">
         <div className="w-full  lg:w-1/2 flex flex-col mt-12 lg:mt-0 justify-center items-start">
           <span className="bg-black text-start border-white text-xl  border-b-2 rounded-sm">
             Contact@caauri.com
           </span>
           <span className="font-thin mt-6  text-start text-xl">
-            Pharmacie Azur,Angré,Abidjan
+            Résevervez une consultation gratuite
             <br />
-            (+225) 07 08 02 80 80
+            ou envoyez nous un email
           </span>
         </div>
         <div className="lg:w-1/2 w-full mt-12 lg:mt-0 flex flex-col justify-center  items-start lg:items-end">
-          <ul className="flex lg:mr-44 gap-x-2">
+          <ul className="flex lg:mr-28 gap-x-2">
             <li>
               {" "}
               <img
@@ -54,9 +54,9 @@ export default function Footer() {
             </li>
           </ul>
           <span className="font-thin   mt-6 text-start text-xl">
-            Résevervez une consultation gratuite
+            Pharmacie Azur,Angré,Abidjan
             <br />
-            ou envoyez nous un email
+            (+225) 07 08 02 80 80
           </span>
         </div>
       </div>
