@@ -82,14 +82,16 @@ export default function Contact() {
               </div>
             </span>
             <br className="sm:hidden block" />
-            <span className="w-[250px] h-[29px]   sm:hidden flex items-center justify-center group">
-              <div className="mt-5 flex  justify-center items-center gap-0 py-4 bg-black w-[152px] rounded-full transition-all px-2   text-white rounded-l-full rounded-r-full">
-                <div className="text-xl">Envoyer</div>
-                <div className="bg-black rounded-b-full w-[29px]  transition-all flex items-center hover-bg-none justify-center rounded-l-full">
-                  <img src="/logo/frame.svg" alt="" />
+            <div className="sm:hidden flex justify-center">
+              <span className="w-[100px] h-[29px]   sm:hidden flex items-center justify-center group">
+                <div className="mt-5 flex  justify-center items-center gap-0 py-4 px-4 bg-black w-[152px] rounded-full transition-all   text-white rounded-l-full rounded-r-full">
+                  <div className="text-xl pl-2">Envoyer</div>
+                  <div className="bg-black rounded-b-full w-[29px]  transition-all flex items-center hover-bg-none justify-center rounded-l-full">
+                    <img src="/logo/frame.svg" alt="" />
+                  </div>
                 </div>
-              </div>
-            </span>
+              </span>
+            </div>
           </form>
         </div>
       </div>
