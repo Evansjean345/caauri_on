@@ -6,12 +6,12 @@ export default function Contact() {
   return (
     <div className="bg-white text-black">
       {/* First Section */}
-      <div className="flex flex-col justify-start space-y-4 sm:space-y-2 pt-40 pl-12 sm:pl-20 items-start">
+      <div className="flex flex-col justify-start space-y-4 sm:space-y-2 pt-40 pl-6 sm:pl-20 items-start">
         <span className="text-5xl  sm:text-6xl  md:text-8xl">Nous joindre</span>
         <span className="text-xl md:text-3xl">Prenons un café</span>
       </div>
       {/* Contact */}
-      <div className="flex lg:flex-row flex-col w-full mt-12 lg:mt-44 pl-12 sm:pl-20 pb-44 lg:pr-0 pr-12">
+      <div className="flex lg:flex-row flex-col w-full mt-12 lg:mt-44 pl-6 sm:pl-20 pb-44 lg:pr-0 pr-12">
         <div className="flex flex-col mt-32 lg:mt-0 lg:order-1 order-2 space-y-8 w-full lg:w-1/2 justify-normal items-start">
           <div className="flex flex-col text-lg">
             <span>Nous envoyez un e-mail :</span>

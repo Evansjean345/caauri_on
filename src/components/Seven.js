@@ -99,7 +99,7 @@ export default function Seven() {
               {/* Content */}
               {content.div1 && (
                 <div className="mt-4 text-white flex flex-col">
-                  <p className="text-white text-xs sm:text-base">
+                  <p className="text-white text-base">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Dolorem, fugit perferendis sequi fugiat tempore aut
                     quibusdam alias animi harum veritatis ullam! Aut corrupti
@@ -110,7 +110,7 @@ export default function Seven() {
                     consectetur ea ut dignissimos sed iure quia vero.
                   </p>
                   <span>
-                    <div className="mt-8 cursor-pointer flex w-[180px] gap-3 py-4 hover:flex hover:items-center hover:justify-center hover:gap-0 hover:bg-black  transition-all px-2   hover:text-white hover:rounded-l-full hover:rounded-r-full">
+                    <div className="mt-8 cursor-pointer flex w-[120px]  py-4 hover:flex items-center justify-center gap-0 bg-black  transition-all px-2   text-white rounded-l-full rounded-r-full">
                       <div>Je postule</div>
                       <div className="bg-black rounded-b-full w-6  transition-all flex items-center justify-center rounded-l-full">
                         <img src="/logo/frame.svg" alt="" />
@@ -154,7 +154,7 @@ export default function Seven() {
               {/* Content */}
               {content.div2 && (
                 <div className="mt-4 text-white flex flex-col">
-                  <p className="text-white text-xs sm:text-base">
+                  <p className="text-white text-base">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Dolorem, fugit perferendis sequi fugiat tempore aut
                     quibusdam alias animi harum veritatis ullam! Aut corrupti
@@ -165,7 +165,7 @@ export default function Seven() {
                     consectetur ea ut dignissimos sed iure quia vero.
                   </p>
                   <span>
-                    <div className="mt-8 cursor-pointer flex w-[180px] gap-3 py-4 hover:flex hover:items-center hover:justify-center hover:gap-0 hover:bg-black  transition-all px-2   hover:text-white hover:rounded-l-full hover:rounded-r-full">
+                    <div className="mt-8 cursor-pointer flex w-[120px]  py-4 hover:flex items-center justify-center gap-0 bg-black  transition-all px-2   text-white rounded-l-full rounded-r-full">
                       <div>Je postule</div>
                       <div className="bg-black rounded-b-full w-6  transition-all flex items-center justify-center rounded-l-full">
                         <img src="/logo/frame.svg" alt="" />
@@ -209,7 +209,7 @@ export default function Seven() {
               {/* Content */}
               {content.div3 && (
                 <div className="mt-4 text-white flex flex-col">
-                  <p className="text-white text-xs sm:text-base">
+                  <p className="text-white text-base">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Dolorem, fugit perferendis sequi fugiat tempore aut
                     quibusdam alias animi harum veritatis ullam! Aut corrupti
@@ -220,7 +220,7 @@ export default function Seven() {
                     consectetur ea ut dignissimos sed iure quia vero.
                   </p>
                   <span>
-                    <div className="mt-8 cursor-pointer flex w-[180px] gap-3 py-4 hover:flex hover:items-center hover:justify-center hover:gap-0 hover:bg-black  transition-all px-2   hover:text-white hover:rounded-l-full hover:rounded-r-full">
+                    <div className="mt-8 cursor-pointer flex w-[120px]  py-4 hover:flex items-center justify-center gap-0 bg-black  transition-all px-2   text-white rounded-l-full rounded-r-full">
                       <div>Je postule</div>
                       <div className="bg-black rounded-b-full w-6  transition-all flex items-center justify-center rounded-l-full">
                         <img src="/logo/frame.svg" alt="" />
@@ -264,7 +264,7 @@ export default function Seven() {
               {/* Content */}
               {content.div4 && (
                 <div className="mt-4 text-white flex flex-col">
-                  <p className="text-white text-xs sm:text-base">
+                  <p className="text-white text-base">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Dolorem, fugit perferendis sequi fugiat tempore aut
                     quibusdam alias animi harum veritatis ullam! Aut corrupti
@@ -275,7 +275,7 @@ export default function Seven() {
                     consectetur ea ut dignissimos sed iure quia vero.
                   </p>
                   <span>
-                    <div className="mt-8 cursor-pointer flex w-[180px] gap-3 py-4 hover:flex hover:items-center hover:justify-center hover:gap-0 hover:bg-black  transition-all px-2   hover:text-white hover:rounded-l-full hover:rounded-r-full">
+                    <div className="mt-8 cursor-pointer flex w-[120px]  py-4 hover:flex items-center justify-center gap-0 bg-black  transition-all px-2   text-white rounded-l-full rounded-r-full">
                       <div>Je postule</div>
                       <div className="bg-black rounded-b-full w-6  transition-all flex items-center justify-center rounded-l-full">
                         <img src="/logo/frame.svg" alt="" />
