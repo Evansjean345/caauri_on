@@ -331,7 +331,7 @@ export default function SectionHome() {
           </div>
         </div>
         {/* Home Section */}
-        <div className="w-full flex flex-col px-2 sm:px-12  2xl:px-[104px] mt-24">
+        <div className="w-full flex items-center justify-center flex-col px-2 sm:px-12  2xl:px-[104px] mt-24">
           <div className="flex  rounded-t-3xl" id="home_sections_items">
             <div className="items_div cursor-pointer  group h-[686px] w-[350px] transition-all  relative rounded-t-3xl overflow-hidden">
               <div className="flex flex-col justify-center rounded-t-3xl transition-all group-hover:bg-[#DFD4C0] pt-12 h-full items-center space-y-12">
@@ -605,7 +605,7 @@ export default function SectionHome() {
           </div>
         </div>
         {/* Scroll section */}
-        <div className="w-full sm:h-[100vh] sm:bg-contain flex flex-col mt-20 sm:mt-52 px-2 ">
+        <div className="w-full sm:h-[600px] sm:bg-contain flex flex-col mt-20 sm:mt-52 px-2 ">
           {/*
           <div className="flex justify-between">
             <img

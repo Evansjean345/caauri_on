@@ -244,7 +244,7 @@ export default function Two() {
         </div>
       </div>
       {/* Four Section */}
-      <div className="sm:h-[120vh] h-[110vh] mt-24 sm:mt-52">
+      <div className=" mt-24 sm:mt-52">
         <div className="flex sm:flex-row flex-col">
           <div className="sm:w-1/2 flex flex-col">
             <span className="px-8 xl:px-20 text-black xl:font-semibold font-bold text-4xl md:text-6xl  sm:text-5xl xl:text-7xl xl:leading-[85px]">
@@ -333,11 +333,11 @@ export default function Two() {
           </div>
         </div>
       </div>
+      <br />
+      <br />
+      <br />
       {/* Formation */}
-      <div
-        className="w-full h-[110vh] first-letter:mt-4"
-        style={styles.container}
-      >
+      <div className="w-full py-8 first-letter:mt-4" style={styles.container}>
         <div className="flex justify-center items-center">
           <span className="xl:font-semibold font-bold text-4xl md:text-6xl  text-[#F99B40] sm:text-5xl xl:text-8xl xl:leading-[85px] lg:pb-20 xl:pt-16 pt-16">
             Formation
@@ -389,7 +389,7 @@ export default function Two() {
         </div>
       </div>
       {/* Section 4 */}
-      <div className="w-full h-[70vh] bg-gradient-to-r from-black  sm:h-[100vh] flex flex-col items-start justify-start  px-8 sm:px-0 sm:pl-20">
+      <div className="w-full py-8 bg-gradient-to-r from-black  sm:h-[100vh] flex flex-col items-start justify-start  px-8 sm:px-0 sm:pl-20">
         <span className="xl:font-semibold font-bold text-4xl md:text-6xl  text-[#F99B40] sm:text-5xl xl:text-8xl xl:leading-[85px] pt-12">
           Event pro
         </span>
