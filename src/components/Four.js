@@ -134,11 +134,11 @@ export default function Four() {
           {data.clientContent}
         </p>
         <div className="flex w-full mt-4">
-          <div className="w-[31%] rounded-3xl flex justify-end">
+          <div className="w-[31%] rounded-lg flex justify-end">
             <img
               src={data.picture && data.picture[3]}
               alt=""
-              className="w-[31%] rounded-3xl"
+              className="w-[31%] rounded-lg"
             />
           </div>
           <div className="w-[69%]  pl-6">
