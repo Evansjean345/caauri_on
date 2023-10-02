@@ -53,7 +53,7 @@ export default function Four() {
       {/* Second section */}
       <div className="sm:px-28 rounded-lg sm:mt-32 mt-12 px-8">
         <img
-          src={data.picture === undefined ? "" : data.picture[0]}
+          src={data.picture && data.picture[0]}
           alt=""
           className="w-full rounded-lg h-[150px] sm:h-[500px] ml-auto mr-auto block"
         />
