@@ -11,18 +11,19 @@ export default function Four() {
   const [data2, setData2] = useState([]);
 
   useEffect(() => {
-    const promises = [
-      axios.get(`https://caauri-api.cyclic.cloud/portfolio/${id}`),
-      axios.get(`https://caauri-api.cyclic.cloud/`),
-    ];
+    function callData() {
+      const response1 = axios
+        .get(`https://caauri-api.cyclic.cloud/portfolio/${id}`)
+        .then((res) => setData(res.data))
+        .catch((err) => console.log(err));
 
-    Promise.all(promises).then((results) => {
-      setData(results[0].data);
-      setData2(results[1].data);
-    });
+      const response2 = axios
+        .get(`https://caauri-api.cyclic.cloud/portfolio/`)
+        .then((res) => setData2(res.data))
+        .catch((err) => console.log(err));
+    }
+    callData();
   }, [id]);
-
-  console.log(data2);
 
   const formattedTitle = data?.title?.replace(/\n/g, "<br>");
   const formattedJob = data?.client?.role?.replace(/\n/g, "<br>");
@@ -134,10 +135,7 @@ export default function Four() {
         </p>
         <div className="flex w-full mt-4">
           <div className="w-[31%] flex justify-end">
-            <img
-              src={data.picture && data.picture[3]}
-              alt=""
-            />
+            <img src={data.picture && data.picture[3]} alt="" className="w-[31%]" />
           </div>
           <div className="w-[69%]  pl-6">
             <span className="font-semibold">
