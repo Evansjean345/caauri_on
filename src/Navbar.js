@@ -39,7 +39,9 @@ export default function Navbar({ onMenuChange }) {
       <div className="w-full flex z-50 py-0 px-5  sm:px-20 justify-between">
         <div className="w-1/2 flex items-center  sm:mt-[3px]">
           {menu ? (
-            <img src="/logo/logo_black_text.png" alt="" className="h-11" />
+            <Link to="/">
+              <img src="/logo/logo_black_text.png" alt="" className="h-11" />
+            </Link>
           ) : (
             ""
           )}

@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Footer from "./Footer";
 import Prefooter from "./Prefooter";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Three() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://caauri-api.cyclic.cloud/portfolio")
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <div className="bg-white text-black">
       {/* Heading */}
@@ -13,7 +26,7 @@ export default function Three() {
           data-aos-duration="2000"
           className="sm:mt-20"
         >
-          <span>Les</span>&nbsp;<span className="text-[#F2B749]">travaux</span>
+          <span>Les</span>&nbsp;<span>travaux</span>
           &nbsp;
           <span>que nous avons</span>
         </p>
@@ -22,7 +35,7 @@ export default function Three() {
           data-aos-easing="linear"
           data-aos-duration="2500"
         >
-          <span className="text-[#F2B749]">réalisés</span>&nbsp;
+          <span>réalisés</span>&nbsp;
           <span>jusqu'à présent</span>
         </p>
       </div>
@@ -95,313 +108,105 @@ export default function Three() {
         </details>
       </div>
       {/* button section mobile version */}
-      <div className="lg:px-24 sm:px-12 px-6">
-        <div className="border border-black"></div>
-      </div>
-      <div className="w-full sm:px-12 px-6 lg:px-24 flex lg:flex-row flex-col">
-        <div className="w-full lg:order-1 order-2 lg:w-1/2 flex flex-col mt-8 bg-white">
-          <ul className="lg:flex space-x-6 mt-3 hidden list-outside">
-            <li>
-              <div className="border-black font-medium text-black border w-[110px] flex items-center justify-center h-[40px] rounded-full text-base">
-                Stratégie
-              </div>
-            </li>
-            <li>
-              <div className="border-black font-medium text-black border w-[110px] flex items-center justify-center h-[40px] rounded-full text-base">
-                Stratégie
-              </div>
-            </li>
-            <li>
-              <div className="border-black font-medium text-black border w-[110px] flex items-center justify-center h-[40px] rounded-full text-base">
-                Stratégie
-              </div>
-            </li>
-          </ul>
-
-          <span className="sm:mt-10 text-xl sm:text-4xl  text-black font-semibold">
-            Lorem ipsum
-          </span>
-
-          <p className="sm:mt-12 mt-2 text-sm sm:text-lg font-medium text-black">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
-            voluptatum aliquam! Eius quis modi, non accusamus voluptas
-            consectetur sapiente. Ex dolor aliquam quo itaque facilis corporis
-            id aspernatur magnam perspiciatis.
-          </p>
-
-          <ul className="list-disc hidden sm:flex flex-col space-y-1 text-black list-inside mt-12 pl-4 text-3xl font-light">
-            <li>Conception d'applications mobiles</li>
-            <li>Conception d'applications Web</li>
-            <li>Conception de la page de destination</li>
-            <li>Marque</li>
-            <li>Système de conception</li>
-            <li>Recherche UX</li>
-            <li>Stratégie</li>
-          </ul>
-
-          <div className="sm:flex hidden mt-20 justify-start space-x-2">
-            <span className="text-3xl text-black">VOIR L'ETUDE DE CAS</span>
-            <img src="/icon/arrow_empty.svg" alt="" />
+      {data.map((el) => (
+        <>
+          <div className="lg:px-24 sm:px-12 px-6">
+            <div className="border border-black"></div>
           </div>
-        </div>
-        <div className="w-full lg:block flex items-center justify-center lg:order-2 order-1 lg:w-1/2  mt-8 relative">
-          <img
-            src="/images/img_tec.png"
-            alt=""
-            className="max-w-full h-auto z-10 ml-auto mr-auto block"
-          />
-          <div className="flex top-0 left-1 sm:left-24 md:left-36 lg:hidden z-20 absolute">
-            <ul className="flex space-x-2 sm:space-x-6 mt-3  list-outside">
-              <li>
-                <div className="border-white bg-white  sm:bg-none text-sm sm:font-medium text-black border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
-                  Refonte
+          <div className="w-full pb-6 sm:px-12 px-6 lg:px-24 flex lg:flex-row flex-col">
+            <div className="w-full lg:order-1 order-2 lg:w-1/2 flex flex-col mt-8 bg-white">
+              <ul className="lg:flex space-x-6 mt-3 hidden list-outside">
+                <li>
+                  <div className="border-black font-medium text-black border w-[110px] flex items-center justify-center h-[40px] rounded-full text-base">
+                    {el.descriptionOne}
+                  </div>
+                </li>
+                <li>
+                  <div className="border-black font-medium text-black border w-[110px] flex items-center justify-center h-[40px] rounded-full text-base">
+                    {el.descriptionTwo}
+                  </div>
+                </li>
+                <li>
+                  <div className="border-black font-medium text-black border w-[110px] flex items-center justify-center h-[40px] rounded-full text-base">
+                    {el.descriptionThree}
+                  </div>
+                </li>
+              </ul>
+
+              <span className="sm:mt-10 text-xl sm:text-4xl  text-black font-semibold">
+                {el.subtitle}
+              </span>
+
+              <p className="sm:mt-12 mt-2 text-sm sm:text-lg font-medium text-black">
+                {el.p}
+              </p>
+
+              <ul className="list-disc hidden sm:flex flex-col space-y-1 text-black list-inside mt-12 pl-4 text-3xl font-light">
+                <li className={el.featureOne === "" ? "hidden" : "visible"}>
+                  {el.featureOne}
+                </li>
+                <li className={el.featureTwo === "" ? "hidden" : "visible"}>
+                  {el.featureTwo}
+                </li>
+                <li
+                  className={el.descriptionThree === "" ? "hidden" : "visible"}
+                >
+                  {el.featureThree}
+                </li>
+                <li className={el.featureFour === "" ? "hidden" : "visible"}>
+                  {el.featureFour}
+                </li>
+                <li className={el.featureFive === "" ? "hidden" : "visible"}>
+                  {el.featureFive}
+                </li>
+                <li className={el.featureSix === "" ? "hidden" : "visible"}>
+                  {el.featureSix}
+                </li>
+                <li className={el.featureSeven === "" ? "hidden" : "visible"}>
+                  {el.featureSeven}
+                </li>
+              </ul>
+
+              <Link to={`/client/${el._id}`}>
+                <div className="sm:flex hidden cursor-pointer hover:underline mt-20 justify-start space-x-2">
+                  <span className="text-3xl text-black">
+                    VOIR L'ETUDE DE CAS
+                  </span>
+                  <img src="/icon/arrow_empty.svg" alt="" />
                 </div>
-              </li>
-              <li>
-                <div className="border-white text-sm sm:font-medium bg-white  sm:bg-none text-black border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
-                  Website
-                </div>
-              </li>
-              <li>
-                <div className="border-white text-sm sm:font-medium bg-white  sm:bg-none text-black border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
-                  BTP
-                </div>
-              </li>
-            </ul>
+              </Link>
+            </div>
+            <div className="w-full lg:block flex items-center justify-center lg:order-2 order-1 lg:w-1/2  mt-8 relative">
+              <Link to={`/client/${el._id}`}>
+                <img
+                  src={el.picture[0]}
+                  alt=""
+                  className="max-w-full h-full rounded-lg cursor-pointer hover:scale-95 transition-all z-10 ml-auto mr-auto block"
+                />
+              </Link>
+              <div className="flex top-0 left-1 sm:left-24 md:left-36 lg:hidden z-20 absolute">
+                <ul className="flex space-x-2 sm:space-x-6 mt-3  list-outside">
+                  <li>
+                    <div className="border-white bg-white  sm:bg-none text-sm sm:font-medium text-black border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
+                      {el.descriptionOne}
+                    </div>
+                  </li>
+                  <li>
+                    <div className="border-white text-sm sm:font-medium bg-white  sm:bg-none text-black border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
+                      {el.descriptionTwo}
+                    </div>
+                  </li>
+                  <li>
+                    <div className="border-white text-sm sm:font-medium bg-white  sm:bg-none text-black border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
+                      {el.descriptionThree}
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      {/*2 */}
-      <div className="px-24 mt-20 lg:block hidden">
-        <div className="border border-black"></div>
-      </div>
-      <div className="w-full sm:px-12 px-6 lg:px-24 flex lg:flex-row flex-col">
-        <div className="w-full lg:order-1 order-2 lg:w-1/2 flex flex-col mt-8 bg-white">
-          <ul className="lg:flex space-x-6 mt-3 hidden list-outside">
-            <li>
-              <div className="border-black font-medium text-black border w-[110px] flex items-center justify-center h-[40px] rounded-full text-base">
-                Stratégie
-              </div>
-            </li>
-            <li>
-              <div className="border-black font-medium text-black border w-[110px] flex items-center justify-center h-[40px] rounded-full text-base">
-                Stratégie
-              </div>
-            </li>
-            <li>
-              <div className="border-black font-medium text-black border w-[110px] flex items-center justify-center h-[40px] rounded-full text-base">
-                Stratégie
-              </div>
-            </li>
-          </ul>
-
-          <span className="sm:mt-10 text-xl sm:text-4xl text-black font-semibold">
-            Lorem ipsum
-          </span>
-
-          <p className="sm:mt-12 mt-2 text-sm sm:text-lg font-medium text-black">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
-            voluptatum aliquam! Eius quis modi, non accusamus voluptas
-            consectetur sapiente. Ex dolor aliquam quo itaque facilis corporis
-            id aspernatur magnam perspiciatis.
-          </p>
-
-          <ul className="list-disc hidden sm:flex flex-col space-y-1 text-black list-inside mt-12 pl-4 text-3xl font-light">
-            <li>Conception d'applications mobiles</li>
-            <li>Conception d'applications Web</li>
-            <li>Conception de la page de destination</li>
-            <li>Marque</li>
-            <li>Système de conception</li>
-            <li>Recherche UX</li>
-            <li>Stratégie</li>
-          </ul>
-
-          <div className="sm:flex hidden mt-20 justify-start space-x-2">
-            <span className="text-3xl text-black">VOIR L'ETUDE DE CAS</span>
-            <img src="/icon/arrow_empty.svg" alt="" />
-          </div>
-        </div>
-        <div className="w-full lg:block flex items-center justify-center lg:order-2 order-1 lg:w-1/2  mt-8 relative">
-          <img
-            src="/images/img_tec.png"
-            alt=""
-            className="max-w-full h-auto z-10 ml-auto mr-auto block"
-          />
-          <div className="flex top-0 left-1 sm:left-24 md:left-36 lg:hidden z-20 absolute">
-            <ul className="flex space-x-2 sm:space-x-6 mt-3  list-outside">
-              <li>
-                <div className="border-white text-sm sm:font-medium text-black bg-white  sm:bg-none border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
-                  Refonte
-                </div>
-              </li>
-              <li>
-                <div className="border-white text-sm sm:font-medium text-black bg-white  sm:bg-none border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
-                  Website
-                </div>
-              </li>
-              <li>
-                <div className="border-white text-sm sm:font-medium text-black bg-white  sm:bg-none border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
-                  BTP
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      {/*3 */}
-      <div className="px-24 mt-20 lg:block hidden">
-        <div className="border border-black"></div>
-      </div>
-      <div className="w-full sm:px-12 px-6 lg:px-24 flex lg:flex-row flex-col">
-        <div className="w-full lg:order-1 order-2 lg:w-1/2 flex flex-col mt-8 bg-white">
-          <ul className="lg:flex space-x-6 mt-3 hidden list-outside">
-            <li>
-              <div className="border-black font-medium text-black border w-[110px] flex items-center justify-center h-[40px] rounded-full text-base">
-                Stratégie
-              </div>
-            </li>
-            <li>
-              <div className="border-black font-medium text-black border w-[110px] flex items-center justify-center h-[40px] rounded-full text-base">
-                Stratégie
-              </div>
-            </li>
-            <li>
-              <div className="border-black font-medium text-black border w-[110px] flex items-center justify-center h-[40px] rounded-full text-base">
-                Stratégie
-              </div>
-            </li>
-          </ul>
-
-          <span className="sm:mt-10 text-xl sm:text-4xl text-black font-semibold">
-            Lorem ipsum
-          </span>
-
-          <p className="sm:mt-12 mt-2 text-sm sm:text-lg font-medium text-black">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
-            voluptatum aliquam! Eius quis modi, non accusamus voluptas
-            consectetur sapiente. Ex dolor aliquam quo itaque facilis corporis
-            id aspernatur magnam perspiciatis.
-          </p>
-
-          <ul className="list-disc hidden sm:flex flex-col space-y-1 text-black list-inside mt-12 pl-4 text-3xl font-light">
-            <li>Conception d'applications mobiles</li>
-            <li>Conception d'applications Web</li>
-            <li>Conception de la page de destination</li>
-            <li>Marque</li>
-            <li>Système de conception</li>
-            <li>Recherche UX</li>
-            <li>Stratégie</li>
-          </ul>
-
-          <div className="sm:flex hidden mt-20 justify-start space-x-2">
-            <span className="text-3xl text-black">VOIR L'ETUDE DE CAS</span>
-            <img src="/icon/arrow_empty.svg" alt="" />
-          </div>
-        </div>
-        <div className="w-full lg:block flex items-center justify-center lg:order-2 order-1 lg:w-1/2  mt-8 relative">
-          <img
-            src="/images/img_tec.png"
-            alt=""
-            className="max-w-full h-auto z-10 ml-auto mr-auto block"
-          />
-          <div className="flex top-0 left-1 sm:left-24 md:left-36 lg:hidden z-20 absolute">
-            <ul className="flex space-x-2 sm:space-x-6 mt-3  list-outside">
-              <li>
-                <div className="border-white text-sm sm:font-medium text-black bg-white  sm:bg-none border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
-                  Refonte
-                </div>
-              </li>
-              <li>
-                <div className="border-white text-sm sm:font-medium text-black bg-white  sm:bg-none border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
-                  Website
-                </div>
-              </li>
-              <li>
-                <div className="border-white text-sm sm:font-medium text-black bg-white  sm:bg-none border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
-                  BTP
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      {/*4 */}
-      <div className="px-24 mt-20 lg:block hidden">
-        <div className="border border-black"></div>
-      </div>
-      <div className="w-full sm:px-12 px-6 lg:px-24 flex lg:flex-row flex-col">
-        <div className="w-full lg:order-1 order-2 lg:w-1/2 flex flex-col mt-8 bg-white">
-          <ul className="lg:flex space-x-6 mt-3 hidden list-outside">
-            <li>
-              <div className="border-black font-medium text-black border w-[110px] flex items-center justify-center h-[40px] rounded-full text-base">
-                Stratégie
-              </div>
-            </li>
-            <li>
-              <div className="border-black font-medium text-black border w-[110px] flex items-center justify-center h-[40px] rounded-full text-base">
-                Stratégie
-              </div>
-            </li>
-            <li>
-              <div className="border-black font-medium text-black border w-[110px] flex items-center justify-center h-[40px] rounded-full text-base">
-                Stratégie
-              </div>
-            </li>
-          </ul>
-
-          <span className="sm:mt-10 text-xl sm:text-4xl text-black font-semibold">
-            Lorem ipsum
-          </span>
-
-          <p className="sm:mt-12 mt-2 text-sm sm:text-lg font-medium text-black">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
-            voluptatum aliquam! Eius quis modi, non accusamus voluptas
-            consectetur sapiente. Ex dolor aliquam quo itaque facilis corporis
-            id aspernatur magnam perspiciatis.
-          </p>
-
-          <ul className="list-disc hidden sm:flex flex-col space-y-1 text-black list-inside mt-12 pl-4 text-3xl font-light">
-            <li>Conception d'applications mobiles</li>
-            <li>Conception d'applications Web</li>
-            <li>Conception de la page de destination</li>
-            <li>Marque</li>
-            <li>Système de conception</li>
-            <li>Recherche UX</li>
-            <li>Stratégie</li>
-          </ul>
-
-          <div className="sm:flex hidden mt-20 justify-start space-x-2">
-            <span className="text-3xl text-black">VOIR L'ETUDE DE CAS</span>
-            <img src="/icon/arrow_empty.svg" alt="" />
-          </div>
-        </div>
-        <div className="w-full lg:block flex items-center justify-center lg:order-2 order-1 lg:w-1/2  mt-8 relative">
-          <img
-            src="/images/img_tec.png"
-            alt=""
-            className="max-w-full h-auto z-10 ml-auto mr-auto block"
-          />
-          <div className="flex top-0 left-1 sm:left-24 md:left-36 lg:hidden z-20 absolute">
-            <ul className="flex space-x-2 sm:space-x-6 mt-3  list-outside">
-              <li>
-                <div className="border-white text-sm sm:font-medium text-black bg-white  sm:bg-none border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
-                  Refonte
-                </div>
-              </li>
-              <li>
-                <div className="border-white text-sm sm:font-medium text-black bg-white  sm:bg-none border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
-                  Website
-                </div>
-              </li>
-              <li>
-                <div className="border-white text-sm sm:font-medium text-black bg-white  sm:bg-none border w-[80px] sm:w-[110px] flex items-center justify-center h-[40px] rounded-full">
-                  BTP
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        </>
+      ))}
       {/**Footer */}
       <Prefooter />
       <Footer />

@@ -1,8 +1,23 @@
-import React from "react";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Footer from "./Footer";
 import Prefooter from "./Prefooter";
 
 export default function Five() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://caauri-api.cyclic.cloud/all_blog")
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  console.log(data);
+
   return (
     <div className="bg-white text-black">
       {/* first Blog */}
@@ -55,43 +70,31 @@ export default function Five() {
         <div className="w-full block sm:hidden px-7 mt-4">
           <div className="w-full border  border-black border-dashed"></div>
         </div>
-        <div className="flex justify-center sm:flex-row flex-col w-full mt-6 sm:mt-12 gap-x-4 px-4 sm:px-24">
-          <div className="sm:w-1/2 flex flex-col px-2 sm:px-0">
-            <div className="h-[284px] rounded-md sm:h-[407px]">
-              <img
-                src="/images/bot.png"
-                alt=""
-                className="max-w-full rounded-md h-full  ml-auto mr-auto block"
-              />
+        <div className="flex justify-center rounded-lg  flex-wrap sm:flex-row flex-col w-full mt-6 sm:mt-12  px-4 sm:px-20">
+          {data.map((el, index) => (
+            <div
+              key={index}
+              className="sm:w-1/2 flex flex-col rounded-lg py-8 px-2 sm:px-0"
+            >
+              <Link to={`/blog/${el._id}`}>
+                <div className="h-[284px] cursor-pointer rounded-lg sm:h-[407px]">
+                  <img
+                    src={el.cover}
+                    alt=""
+                    className="w-full hover:scale-105  transition-all   sm:px-6 rounded-lg h-full block"
+                  />
+                </div>
+              </Link>
+              <div className="flex flex-col mt-4 sm:px-8">
+                <span className="sm:text-3xl text-xs font-medium">
+                  {el.title.replace(/\n/g, "<br>")}
+                </span>
+                <span className="sm:mt-4 mt-1 text-xs sm:text-2xl">
+                  {el.date} | Content
+                </span>
+              </div>
             </div>
-            <div className="flex flex-col mt-4">
-              <span className="sm:text-3xl text-xs font-medium">
-                IA : DES CONSEILS SIMPLES POUR UTILISER L'IA <br /> COMME UN
-                PROFESIONNEL
-              </span>
-              <span className="sm:mt-4 mt-1 text-xs sm:text-2xl">
-                21/12/2023 | Contenu
-              </span>
-            </div>
-          </div>
-          <div className="sm:w-1/2 mt-6 sm:mt-0 flex flex-col px-2 sm:px-0">
-            <div className="sm:h-[407px] rounded-md h-[284px]">
-              <img
-                src="/images/bot.png"
-                alt=""
-                className="max-w-full h-full rounded-md  ml-auto mr-auto block"
-              />
-            </div>
-            <div className="flex flex-col mt-4">
-              <span className="sm:text-3xl text-xs font-medium">
-                IA : DES CONSEILS SIMPLES POUR UTILISER L'IA <br /> COMME UN
-                PROFESIONNEL
-              </span>
-              <span className="sm:mt-4 mt-1 text-xs sm:text-2xl">
-                21/12/2023 | Contenu
-              </span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
       {/* Footer */}

@@ -1,15 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../App.css";
 import Footer from "./Footer";
 import Prefooter from "./Prefooter";
+import axios from "axios";
 
 export default function SectionAmime() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://caauri-api.cyclic.cloud/caauri/65097b48d3b64a105032ddfc")
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  console.log(data);
+
   return (
     <div className="bg-white text-black">
       <iframe
         id="iframe-trailer"
         className="w-full"
-        height="500"
+        height="800"
         src="https://www.dailymotion.com/embed/video/x33a1ra"
         title="YouTube video player"
         frameborder="0"
@@ -107,31 +121,19 @@ export default function SectionAmime() {
                 AGENCE DE PUBLICITE DIGITALE
               </strong>
               <p className="font-thin sm:text-base text-black text-xs">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-                nobis rerum vero recusandae, facilis unde? Excepturi vitae eos,
-                officia.
+                {data.firstSection && data.firstSection.p1}
                 <br />
                 <br />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                explicabo exercitationem, officiis vero voluptate delectus, ab
-                quibusdam iusto natus veritatis repellendus aut iste minima
-                dolores sit earum beatae laborum soluta!
+                {data.firstSection && data.firstSection.p2}
                 <br />
                 <br />
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Veritatis blanditiis dicta reiciendis? In necessitatibus
-                explicabo ea natus totam esse perspiciatis minima laboriosam,
-                dolore dolorem eius exercitationem excepturi veniam aperiam?
-                Laudantium!
+                {data.firstSection && data.firstSection.p3}
               </p>
               <strong className="w-full text-[#FF9A62] flex items-center justify-center font-thin my-4">
                 VOUS FOURNIR 100% DE SATISFACTION
               </strong>
               <p className="font-light text-black text-xs sm:text-base">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti cumque esse asperiores voluptatum quasi tenetur
-                molestias eos saepe reiciendis, culpa atque labore magnam
-                accusantium neque iusto vero aliquid nam aspernatur.
+                {data.firstSection && data.firstSection.p4}
               </p>
               <ul className="mt-4 list-inside text-black font-thin list-disc text-xs sm:text-base">
                 <li>Lorem ipsum dolor, sit amet </li>
@@ -152,7 +154,7 @@ export default function SectionAmime() {
             </strong>
             <div className="h-[550px] sm:h-[580px] md:h-[720px] bg-white">
               <img
-                src="https://s3-alpha-sig.figma.com/img/5a2c/9267/ee5339817f564f6b8fc4c7a711a7d1b3?Expires=1694390400&Signature=XCoRX0UdrUXpmOJm5TBgcL-wqMPL4xmf8B~THQ1SjOBHwPw3wbSq1jn2fkg2kcZNyI36htoMHiEry8my05ldNlOUoelMEGroymxvhX7cPsvz0oFeoevehjImHzea56ExqttubrXzw0NoozngOzof6XZlmnRwwyo8TGXdPxk2Kz~IEosw-Siqoaj9JSyjf72hmLIZZsww5YBz5qTVKvgz8zNc6m24rHlCBzNbHf7~n3O6ZvEhh6auTmklhNsubAx0fsrFuRlRpFhYCJBLTEktoFgWbzVh5pcVwzD0BQW5mUMFOW-QHehSYXLBQN9ut6s2357K69j9xWXuMSZFDOs-Ww__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                src="/images/mac_img.png"
                 alt=""
                 className=" max-w-full h-full ml-auto mr-auto block"
                 data-aos="fade-right"
@@ -194,7 +196,7 @@ export default function SectionAmime() {
           {/*roll up */}
           <div className="h-[850px] sm:h-[950px]">
             <img
-              src="https://s3-alpha-sig.figma.com/img/7882/e71e/3e0c30d2d351c5c0bc4f1a023899c09f?Expires=1694390400&Signature=jvdEFzNiFI6gYpkaggq70RQb9L04tnGDvarnM~WQTUM8eQT4yM7MiOuHRf1e5bLPtLaKjD4sWt5AjmDC-7JBNoYe7PZ8fWLay-7GX54rONQO1pObTrEJH8xI1wLb8gDsVk4fEbcq-1MCBOTa~CJrA3Ulz1L0YXKXCW67aUyaWYVxiIM2zflB4nETrrIFuiiNtNgrpcVmTS5TLp-4Z3tdWjljsWW7ISEXLcMk51MhomwyW9CXJcKoHPCU9rUItG7OWO-NrE8VOzaMHbUb6Umy9vO6hCe8gqq4gIaRYv8KDDQ30gNRQhPcgwUdIbsop4SVxiPv0K5sRUL8CFro94RAyA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              src="/images/roll_up.png"
               alt=""
               className="max-w-full h-full ml-auto mr-auto block"
               data-aos="fade-right"
@@ -261,7 +263,7 @@ export default function SectionAmime() {
           {/* image ipad */}
           <div className="bg-white mt-[1150px] h-[580px] ">
             <img
-              src="https://s3-alpha-sig.figma.com/img/1955/f003/b0957b1e0de857ca1b822944cfe9c637?Expires=1694390400&Signature=F2ZQGTf72tRdCB4pPT~M9N36Y-DpKMZpH2j8yx1aMgdsqYxwk4hjVoE05FND65eQrrgputE3p78OKqjjKmyMBK-aZudsNGK0wWJgFxLMd8aCKUn4bSsWBy76HxWHrL318RsIcGba-cU8sCOwCe~4i4XBdS1gr-hmbKKLq8zuXmWxFM7B-pblLKW2U444dszqfEDkfGag5QhkMowjrn7~I~SSlRqX9nGRjlxP9t4uiM8rf0ADcJ8~Kd4K38yzskaDB4A8t~j~CC1SWxcYCbbgXcBpTBHC7KfuWOi7hwITgHsCXyI7mpHTd~1hqNKTHaFtyG7Exia9d8bdir0r6aI1pg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              src="/images/ipad.png"
               alt=""
               className="max-w-full h-full ml-auto mr-auto block"
               data-aos="fade-right"
@@ -606,7 +608,7 @@ export default function SectionAmime() {
           </div>
           <div className="flex-col flex h-[550px]  items-center justify-end">
             <img
-              src="https://s3-alpha-sig.figma.com/img/aaa1/2607/44165d4c645f7e773b308c1d1823f599?Expires=1694390400&Signature=QZ-3JH9XNPfz8A8j9T3Dkj83TyviCE3MHHcqsmLNZi3DLLZTkgVhg5ZSFc8filtMuwXGU6x4MU63icl6yvVlQ31hrVwWiR2IDLUxtKI4zS0kqUSoNRhLHUlw2tRi0GeQmEYT~mC11uQ6sRB9VklN1MS9dRmKRYWChkFV1UXK-TuvaPADZite~j5fr9pQoisLnyojUrSVxupkwVHLuBPkBRGM0n4gAQ8oU7vgkLW2F3PI~13W5jdJU9ahK8whpRgu34QOmtL8IwsJLccsXQWfp3X1UqgcyugMTTnK5z~DK8lLK21JCUonnvQgZvJG2n3aUz2Jbl-HawnZ7mrhAudTJQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              src="/images/out.png"
               alt=""
               className="max-w-full h-full ml-auto mr-auto block"
               data-aos="fade-right"
@@ -656,10 +658,7 @@ export default function SectionAmime() {
               </span>
               <br />
               <p className="mt-6 pr-4 text-xs sm:text-base text-black ">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque
-                voluptate, corrupti maiores corporis asperiores dicta expedita,
-                doloremque, esse architecto alias aut. Expedita recusandae nihil
-                culpa asperiores aut sed fugit minima.
+                {data.lastSection && data.lastSection.p}
               </p>
             </div>
           </div>

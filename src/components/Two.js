@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import Prefooter from "./Prefooter";
 import { TweenMax, Power1 } from "gsap";
 import { motion, useAnimation } from "framer-motion";
+import axios from "axios";
 
 const styles = {
   container: {
@@ -15,6 +16,46 @@ const styles = {
 };
 
 export default function Two() {
+  //data
+  const [title, setTitle] = useState("");
+  const [subtitle, setSubtitle] = useState("");
+  const [web, setWeb] = useState({
+    pp: "",
+    p1: "",
+    p2: "",
+    p3: "",
+    p4: "",
+  });
+  const [formation, setformation] = useState({
+    p1: "",
+    p2: "",
+    p3: "",
+    p4: "",
+  });
+  const [event, setEvent] = useState({
+    pp: "",
+    p1: "",
+    p2: "",
+    p3: "",
+  });
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    axios
+      .get("https://caauri-api.cyclic.cloud/service/6510a1350cecf95fbb9d42c2")
+      .then((res) => {
+        setTitle(res.data.title);
+        setSubtitle(res.data.subtitle);
+        setWeb(res.data.web);
+        setformation(res.data.formation);
+        setEvent(res.data.event);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  const formattedTitle = title.replace(/\n/g, "<br>");
+
+  //animation
   const rebondRef = useRef(null);
   const [activeElement, setActiveElement] = useState("A");
   const [elementWidht, setElementWidht] = useState(30);
@@ -100,13 +141,9 @@ export default function Two() {
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration="1800"
+          dangerouslySetInnerHTML={{ __html: formattedTitle }}
           className="w-full px-8 sm:px-0 pl-0 sm:pl-44 xl:font-semibold font-bold text-4xl md:text-6xl  sm:text-5xl xl:text-7xl xl:leading-[85px]"
-        >
-          Tout commence
-          <br />
-          Par <br />
-          compétences
-        </div>
+        />
         <div className="flex w-full md:mt-6 mt-16">
           <div className="w-1/2 "></div>
           <div
@@ -115,8 +152,7 @@ export default function Two() {
             data-aos-duration="2500"
             className="w-full md:px-0 px-8 md:pl-0  sm:px-24 md:w-1/2 font-medium sm:font-normal text-sm md:text-4xl md:pr-44 text-black"
           >
-            Agence curieuse, toujours en train de s'adapter et évoluant avec le
-            temps, et c'est ce qui fait nos créations vraiment spécial.
+            {subtitle}
           </div>
         </div>
         <div className="flex my-28 gap-3 items-center justify-center">
@@ -216,10 +252,7 @@ export default function Two() {
               Développement
             </span>
             <span className="mt-6 px-8 xl:px-20 sm:font-medium font-normal text-sm md:text-xl  text-black">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
-              voluptas magnam beatae doloribus architecto nisi odit consequuntur
-              sit error rerum, provident eius maxime non, porro natus fugiat
-              inventore voluptatem a.
+              {web.pp}
             </span>
           </div>
           <div className="sm:w-1/2 px-8 py-8 sm:py-0 sm:px-8 xl:px-20 h-[431px]">
@@ -256,10 +289,7 @@ export default function Two() {
         <div className="flex mt-6 sm:mt-20 gap-6 px-8 xl:px-20 sm:gap-10 justify-evenly">
           <div className="w-1/4 flex flex-col ">
             <span className="font-medium sm:text-base text-xs">01</span>
-            <p className="mt-2 font-medium sm:text-base text-xs">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Blanditiis cupiditate consectetur
-            </p>
+            <p className="mt-2 font-medium sm:text-base text-xs">{web.p1}</p>
             <div className="border-[#e3e2e2] mt-2 bg-[#e3e2e2] border w-full rounded-3xl">
               <motion.div
                 className="animated-image border-black  rounded-3xl border-2"
@@ -270,10 +300,7 @@ export default function Two() {
           </div>
           <div className="w-1/4 flex flex-col ">
             <span className="font-medium sm:text-base text-xs">02</span>
-            <p className="mt-2 font-medium sm:text-base text-xs">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Blanditiis cupiditate consectetur
-            </p>
+            <p className="mt-2 font-medium sm:text-base text-xs">{web.p2}</p>
             <div className="border-[#e3e2e2] mt-2 bg-[#e3e2e2] border w-full rounded-3xl">
               <motion.div
                 className="animated-image border-black  rounded-3xl border-2"
@@ -284,10 +311,7 @@ export default function Two() {
           </div>
           <div className="w-1/4 flex flex-col ">
             <span className="font-medium sm:text-base text-xs">03</span>
-            <p className="mt-2 font-medium sm:text-base text-xs">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Blanditiis cupiditate consectetur
-            </p>
+            <p className="mt-2 font-medium sm:text-base text-xs">{web.p3}</p>
             <div className="border-[#e3e2e2] mt-2 bg-[#e3e2e2] border w-full rounded-3xl">
               <motion.div
                 className="animated-image border-black  rounded-3xl border-2"
@@ -298,10 +322,7 @@ export default function Two() {
           </div>
           <div className="w-1/4 flex flex-col ">
             <span className="font-medium sm:text-base text-xs">04</span>
-            <p className="mt-2 font-medium sm:text-base text-xs">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Blanditiis cupiditate consectetur
-            </p>
+            <p className="mt-2 font-medium sm:text-base text-xs">{web.p4}</p>
             <div className="border-[#e3e2e2] mt-2 bg-[#e3e2e2] border w-full rounded-3xl">
               <motion.div
                 className="animated-image border-black  rounded-3xl border-2"
@@ -314,7 +335,7 @@ export default function Two() {
       </div>
       {/* Formation */}
       <div
-        className="w-full h-[100vh] first-letter:mt-4"
+        className="w-full h-[110vh] first-letter:mt-4"
         style={styles.container}
       >
         <div className="flex justify-center items-center">
@@ -328,9 +349,7 @@ export default function Two() {
               CONCEPTION WEB
             </span>
             <p className="mt-8 text-white text-xs font-thin md:text-base lg:text-xl text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-              nobis, deleniti ut, similique inventore ullam modi quas,
-              perspiciatis cumque nemo perferendis
+              {formation.p1}
             </p>
           </div>
           <div className="w-1/4 flex flex-col border-r  justify-center items-center h-[233px] p-1 md:p-7">
@@ -338,9 +357,7 @@ export default function Two() {
               CONCEPTION WEB
             </span>
             <p className="mt-8 text-white text-xs  font-thin md:text-base lg:text-xl text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-              nobis, deleniti ut, similique inventore ullam modi quas,
-              perspiciatis cumque nemo perferendis
+              {formation.p2}
             </p>
           </div>
           <div className="w-1/4 flex flex-col border-r justify-center items-center h-[233px] p-1 md:p-7">
@@ -348,9 +365,7 @@ export default function Two() {
               CONCEPTION WEB
             </span>
             <p className="mt-8 text-white text-xs font-thin  md:text-base lg:text-xl text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-              nobis, deleniti ut, similique inventore ullam modi quas,
-              perspiciatis cumque nemo perferendis
+              {formation.p3}
             </p>
           </div>
           <div className="w-1/4 flex flex-col justify-center  items-center h-[233px] p-1 md:p-7">
@@ -358,9 +373,7 @@ export default function Two() {
               CONCEPTION WEB
             </span>
             <p className="mt-8 text-white text-xs md:text-base font-thin lg:text-xl text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-              nobis, deleniti ut, similique inventore ullam modi quas,
-              perspiciatis cumque nemo perferendis
+              {formation.p4}
             </p>
           </div>
         </div>
@@ -381,10 +394,7 @@ export default function Two() {
           Event pro
         </span>
         <p className="flex justify-start items-start text-start mt-8 sm:mt-32 sm:w-[450px] text-white text-sm sm:text-xl">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam
-          provident vero suscipit perspiciatis nesciunt nam? Repellendus dolorum
-          architecto eius minus blanditiis exercitationem, laudantium qui ullam
-          cum veniam, id magnam similique?
+          {event.pp}
         </p>
         <ul className="flex mt-8 sm:mt-8 flex-col xl:flex-row">
           <li>
@@ -393,8 +403,7 @@ export default function Two() {
               <span className="text-white">Event Corporate</span>
             </div>
             <span className="text-xs mt-2 flex items-start justify-start sm:w-96 text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates dolores laudantium accusamus dolor itaque placeat ab
+              {event.p1}
             </span>
           </li>
           <li>
@@ -403,8 +412,7 @@ export default function Two() {
               <span className="text-white">Event Corporate</span>
             </div>
             <span className="text-xs mt-2 flex items-start justify-start sm:w-96 text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates dolores laudantium accusamus dolor itaque placeat ab
+              {event.p2}
             </span>
           </li>
           <li>
@@ -413,8 +421,7 @@ export default function Two() {
               <span className="text-white">Event Corporate</span>
             </div>
             <span className="text-xs mt-2 flex items-start justify-start sm:w-96 text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates dolores laudantium accusamus dolor itaque placeat ab
+              {event.p3}
             </span>
           </li>
         </ul>

@@ -5,10 +5,39 @@ import Prefooter from "./Prefooter";
 import "../style.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import axios from "axios";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function SectionHome() {
+  //data
+  const [title, setTitle] = useState("");
+  const [subtitle, setSubtitle] = useState("");
+  const [section, setSection] = useState("");
+  const [pub, setPub] = useState("");
+  const [portfolio1, setPortfolio1] = useState("");
+  const [portfolio2, setPortfolio2] = useState("");
+
+  useEffect(() => {
+    axios
+      .get("https://caauri-api.cyclic.cloud/home/65106a94b5ae36e57d7e64dd")
+      .then((res) => {
+        setTitle(res.data.title);
+        setSubtitle(res.data.subtitle);
+        setSection(res.data.section);
+        setPub(res.data.pub);
+        setPortfolio1(res.data.portfolio.title);
+        setPortfolio2(res.data.portfolio.subtitle);
+      })
+      .catch((err) => console.log("error", err));
+
+    console.log(title);
+  }, []);
+
+  const formattedTitle = title.replace(/\n/g, "<br>");
+  const formattedPortfolioTitle = portfolio1.replace(/\n/g, "<br>");
+  const formattedPortfolioSubtitle = portfolio2.replace(/\n/g, "<br>");
+
   //remove background version mobile
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -210,17 +239,12 @@ export default function SectionHome() {
         >
           <div className="caauri_div_home w-[60%]  flex flex-col justify-center pl-6 lg:pl-6 md:pl-12  2xl:pl-40">
             <p
+              dangerouslySetInnerHTML={{ __html: formattedTitle }}
               data-aos="fade-down"
               data-aos-easing="linear"
               data-aos-duration="1500"
               className="xl:font-semibold leading-[41px] font-bold text-[30.5px] md:text-6xl  sm:text-6xl xl:text-7xl xl:leading-[85px]"
-            >
-              Une image de marque
-              <br />
-              qui attire réellement
-              <br />
-              l'attention.
-            </p>
+            />{" "}
             {/* Remove div */}
             <div className="remove_div">
               <p
@@ -229,8 +253,7 @@ export default function SectionHome() {
                 data-aos-duration="1600"
                 className="mt-8 text-xs sm:text-[24px] sm:leading-[35px]"
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                aspernatur consequatur blanditiis accusamus fugit iste
+                {subtitle}
               </p>
               <span>
                 <div
@@ -309,10 +332,7 @@ export default function SectionHome() {
         </div>
         {/* Home Section */}
         <div className="w-full flex flex-col px-2 sm:px-12  2xl:px-[104px] mt-24">
-          <div
-            className="flex border-2 border-[#DFD4C0] rounded-t-3xl"
-            id="home_sections_items"
-          >
+          <div className="flex  rounded-t-3xl" id="home_sections_items">
             <div className="items_div cursor-pointer  group h-[686px] w-[350px] transition-all  relative rounded-t-3xl overflow-hidden">
               <div className="flex flex-col justify-center rounded-t-3xl transition-all group-hover:bg-[#DFD4C0] pt-12 h-full items-center space-y-12">
                 <div className=" md:w-[200px] w-[236px]  xl:w-[236px] h-[48px] bg-black transition-all group-hover:bg-[#DFD4C0] group-hover:border-2 group-hover:border-black group-hover:text-black py-8 text-center group-hover:mt-32 text-white flex justify-center items-center rounded-full">
@@ -321,8 +341,7 @@ export default function SectionHome() {
                   Digitale
                 </div>
                 <div className="w-[236px] hidden transition-all group-hover:block text-center">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Repellat a consequuntur eveniet sint ratione culpa sed.
+                  {section && section.p1}
                 </div>
                 <div className="flex-col absolute space-y-1 transition-all bottom-32 left-20 z-10 hidden group-hover:flex">
                   <div className="w-[70px] shadow-2xl flex items-center justify-center p-1 h-[70px] bg-white rounded-3xl">
@@ -391,8 +410,7 @@ export default function SectionHome() {
                   Développement
                 </div>
                 <div className="w-[236px] hidden transition-all group-hover:block text-center">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Repellat a consequuntur eveniet sint ratione culpa sed.
+                  {section && section.p2}
                 </div>
                 <div className="flex-col absolute space-y-1 left-8 transition-all bottom-8  z-10 hidden group-hover:flex">
                   <div className="w-[210px] flex shadow-2xl gap-x-4 items-center justify-center p-1 h-[58px] bg-white rounded-xl">
@@ -541,8 +559,7 @@ export default function SectionHome() {
                   Formation
                 </div>
                 <div className="w-[236px] hidden transition-all group-hover:block text-center">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Repellat a consequuntur eveniet sint ratione culpa sed.
+                  {section && section.p3}
                 </div>
                 <div className="flex-col bg-white w-[192px] h-[138px] absolute space-y-1 rounded-3xl transition-all bottom-32 left-2 shadow-2xl z-10 hidden group-hover:flex">
                   <div className="font-medium h-[30%] w-full flex items-center justify-center border-b ">
@@ -566,8 +583,7 @@ export default function SectionHome() {
                   Event Pro
                 </div>
                 <div className="w-[236px] hidden transition-all group-hover:block text-center">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Repellat a consequuntur eveniet sint ratione culpa sed.
+                  {section && section.p4}
                 </div>
                 <div className="flex-col bg-white w-[192px] h-[138px] absolute space-y-1 rounded-3xl transition-all bottom-32 left-2 shadow-2xl z-10 hidden group-hover:flex">
                   <div className="font-medium h-[30%] w-full flex items-center justify-center border-b ">
@@ -587,66 +603,6 @@ export default function SectionHome() {
               </div>
             </div>
           </div>
-          <svg
-            height="69"
-            viewBox="0 0 925 69"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="remove_div w-full"
-          >
-            <g clip-path="url(#clip0_826_5652)">
-              <path
-                d="M462.955 60.2839C458.4 47.9627 446.536 39.1772 432.624 39.1772H44.6583C25.2899 39.1772 9.19366 25.1126 6.03906 6.64062"
-                stroke="#DFD4C0"
-                stroke-width="1.95937"
-              />
-              <path
-                d="M356.199 39.1772H338.565C319.568 39.1772 303.805 25.3183 300.856 7.15967"
-                stroke="#DFD4C0"
-                stroke-width="1.95937"
-              />
-              <path
-                d="M462.045 60.2839C466.6 47.9627 478.464 39.1772 492.376 39.1772H880.332C899.534 39.1772 915.513 25.3673 918.873 7.1499"
-                stroke="#DFD4C0"
-                stroke-width="1.95937"
-              />
-              <path
-                d="M568.791 39.1772H586.425C605.422 39.1772 621.185 25.3085 624.134 7.1499"
-                stroke="#DFD4C0"
-                stroke-width="1.95937"
-              />
-              <path
-                d="M462.495 68.5601L456.137 57.5415H468.863L462.505 68.5601H462.495Z"
-                fill="#DFD4C0"
-              />
-              <path
-                d="M301.826 0L308.184 11.0186H295.458L301.816 0H301.826Z"
-                fill="#DFD4C0"
-              />
-              <path
-                d="M623.164 0L629.522 11.0186H616.796L623.154 0H623.164Z"
-                fill="#DFD4C0"
-              />
-              <path
-                d="M918.05 0L924.418 11.0186H911.682L918.05 0Z"
-                fill="#DFD4C0"
-              />
-              <path
-                d="M6.9402 0L13.2984 11.0186H0.582031L6.9402 0Z"
-                fill="#DFD4C0"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_826_5652">
-                <rect
-                  width="924"
-                  height="68.56"
-                  fill="white"
-                  transform="translate(0.5)"
-                />
-              </clipPath>
-            </defs>
-          </svg>
         </div>
         {/* Scroll section */}
         <div className="w-full sm:h-[100vh] sm:bg-contain flex flex-col mt-20 sm:mt-52 px-2 ">
@@ -669,21 +625,14 @@ export default function SectionHome() {
             <span className="text-3xl text-center sm:text-4xl md:text-5xl xl:text-7xl">
               Agence de publicité digitale
             </span>
-            <p className="mt-12 text-[#666666] text-start px-4 sm:px-0 sm:text-center  sm:text-lg md:text-2xl">
-              Notre Agence de publicité digitale est votre partenaire de
-              confiance pour propulser votre <br className="sm:block hidden" />
-              présence en ligne vers de nouveaux sommets
+            <p className="mt-12 text-[#666666] text-start px-4 sm:px-24 md:px-48 sm:text-center  sm:text-lg md:text-2xl">
+              {pub && pub.p1}
             </p>
-            <p className="mt-6 text-[#666666] text-start px-4 sm:px-0 sm:text-center sm:text-lg md:text-2xl">
-              Nous ne contentons pas seulement de créer des identités
-              fantaisistes et des sites <br className="sm:block hidden" />
-              Web. Notre mission est de vous aider à réaliser votre voyage
-              ambitieux
+            <p className="mt-6 text-[#666666] text-start px-4 sm:px-24 md:px-48 sm:text-center sm:text-lg md:text-2xl">
+              {pub && pub.p2}
             </p>
-            <p className="mt-6 text-[#666666] text-start px-4 sm:px-0 sm:text-center sm:text-lg md:text-2xl">
-              Nous faisons avancer votre vision de marque et établissons les
-              bases solides avec les bons <br className="sm:block hidden" />
-              outils pour une croissance à long terme
+            <p className="mt-6 text-[#666666] text-start px-4 sm:px-24 md:px-48 sm:text-center sm:text-lg md:text-2xl">
+              {pub && pub.p3}
             </p>
           </div>
           {/*
@@ -710,18 +659,14 @@ export default function SectionHome() {
           <span className="text-white lg:text-3xl text-xl z-30 font-normal">
             PORTFOLIO
           </span>
-          <span className="text-white lg:text-7xl text-3xl z-30 sm:text-4xl font-medium mt-10 text-center">
-            Un travail remarquable, et
-            <br />
-            rien de moins
-          </span>
-          <p className="text-center text-white text-xl z-30 sm:text-3xl lg:text-4xl font-thin mt-16">
-            Nous préférons "MONTRER" plutôt que "RACONTER".
-            <br className="sm:block hidden" />
-            Jetez un coup d'oeil à une petite sélection de nos
-            <br className="sm:block hidden" />
-            travaux antérieurs
-          </p>
+          <span
+            dangerouslySetInnerHTML={{ __html: formattedPortfolioTitle }}
+            className="text-white lg:text-7xl text-3xl z-30 sm:text-4xl font-medium mt-10 text-center"
+          />
+          <p
+            className="text-center text-white px-4 sm:px-0 text-xl z-30 sm:text-3xl lg:text-4xl font-thin mt-16"
+            dangerouslySetInnerHTML={{ __html: formattedPortfolioSubtitle }}
+          />
           <span className="z-20 sm:block hidden">
             <div className="mt-16 cursor-pointer  flex w-[180px] gap-5 py-4 hover:gap-0   hover:flex hover:items-center hover:justify-center  hover:bg-white  transition-all px-2 text-white  hover:text-black hover:rounded-l-full hover:rounded-r-full">
               <div>Notre Portfolio</div>

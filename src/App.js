@@ -61,9 +61,9 @@ function App() {
           <Route path="/caaurimuniquez" element={<Anime_page />} />
           <Route path="/services" element={<Page_two />} />
           <Route path="/portfolio" element={<Page_three />} />
-          <Route path="/client" element={<Page_Four />} />
+          <Route path="/client/:id" element={<Page_Four />} />
           <Route path="/blog" element={<Page_five />} />
-          <Route path="/blog_recursive" element={<Page_six />} />
+          <Route path="/blog/:id" element={<Page_six />} />
           <Route path="/carriere" element={<Page_Seven />} />
           <Route path="/contact" element={<Contact_page />} />
         </Routes>
