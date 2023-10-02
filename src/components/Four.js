@@ -106,14 +106,14 @@ export default function Four() {
       <div className="flex w-full md:flex-row flex-col mt-16 gap-x-0 md:gap-x-16 gap-y-10 md:gap-y-0 px-8 md:px-20">
         <div className="md:w-1/2 rounded-lg w-full">
           <img
-            src={data.picture === undefined ? null : data.picture[1]}
+            src={data.picture && data.picture[1]}
             alt=""
             className="w-full rounded-lg h-[175px] sm:h-[350px] z-10 ml-auto mr-auto block"
           />
         </div>
         <div className="md:w-1/2 rounded-lg w-full">
           <img
-            src={data.picture === undefined ? null : data.picture[2]}
+            src={data.picture && data.picture[2]}
             alt=""
             className="w-full rounded-lg h-[175px] sm:h-[350px] z-10 ml-auto mr-auto block"
           />
@@ -135,7 +135,7 @@ export default function Four() {
         <div className="flex w-full mt-4">
           <div className="w-[31%] flex justify-end">
             <img
-              src={data.picture === undefined ? null : data.picture[3]}
+              src={data.picture && data.picture[3]}
               alt=""
             />
           </div>
