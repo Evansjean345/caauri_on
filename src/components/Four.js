@@ -26,7 +26,7 @@ export default function Four() {
   }, [id]);
 
   const formattedTitle = data?.title?.replace(/\n/g, "<br>");
-  const formattedJob = data?.client?.role?.replace(/\n/g, "<br>");
+  const formattedJob = data?.clientJob?.replace(/\n/g, "<br>");
 
   return (
     <div className="bg-white text-black">
@@ -89,17 +89,17 @@ export default function Four() {
         <div className="xl:w-[55%] w-full px-8 sm:px-12 xl:px-12 flex-col flex xl:pr-24 font-semibold text-xl sm:text-2xl text-start">
           <p>PROBLEMATIQUE</p>
           <span className="text-xs sm:text-base mt-2 sm:mt-5 font-normal">
-            {data.problematic && data.problematic.p1}
+            {data.problematicOne}
           </span>
           <span className="text-xs sm:text-base mt-5 font-normal">
-            {data.problematic && data.problematic.p2}
+          {data.problematicTwo}
           </span>
           <p className="sm:mt-6 mt-3">STRATEGIE DE L'AGENCE</p>
           <span className="sm:text-base text-xs mt-2 sm:mt-5 font-normal">
-            {data.strategy && data.strategy.p1}
+          {data.strategyOne}
           </span>
           <span className="text-xs sm:text-base mt-3 sm:mt-5 font-normal">
-            {data.strategy && data.strategy.p2}
+          {data.strategyTwo}
           </span>
         </div>
       </div>
@@ -131,16 +131,20 @@ export default function Four() {
           CE QUE LE CLIENT A DIT
         </span>
         <p className="lg:text-xl text-xs  font-normal px-8 xl:px-96 mt-4">
-          {data.client && data.client.p}
+          {data.clientContent}
         </p>
         <div className="flex w-full mt-4">
-          <div className="w-[31%] flex justify-end">
-            <img src={data.picture && data.picture[3]} alt="" className="w-[31%]" />
+          <div className="w-[31%] rounded-3xl flex justify-end">
+            <img
+              src={data.picture && data.picture[3]}
+              alt=""
+              className="w-[31%] rounded-3xl"
+            />
           </div>
           <div className="w-[69%]  pl-6">
             <span className="font-semibold">
               {" "}
-              {data.client && data.client.name}
+              {data.clientName}
             </span>
             <br />
             <br />
