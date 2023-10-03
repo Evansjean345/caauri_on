@@ -331,8 +331,8 @@ export default function SectionHome() {
           </div>
         </div>
         {/* Home Section */}
-        <div className="w-full flex items-center justify-center flex-col px-2 sm:px-12  2xl:px-[104px] mt-24">
-          <div className="flex  rounded-t-3xl" id="home_sections_items">
+        <div className="w-full flex  flex-col px-2 sm:px-12  2xl:px-[104px] mt-24">
+          <div className="flex w-full rounded-t-3xl" id="home_sections_items">
             <div className="items_div cursor-pointer  group h-[686px] w-[350px] transition-all  relative rounded-t-3xl overflow-hidden">
               <div className="flex flex-col justify-center rounded-t-3xl transition-all group-hover:bg-[#DFD4C0] pt-12 h-full items-center space-y-12">
                 <div className=" md:w-[200px] w-[236px]  xl:w-[236px] h-[48px] bg-black transition-all group-hover:bg-[#DFD4C0] group-hover:border-2 group-hover:border-black group-hover:text-black py-8 text-center group-hover:mt-32 text-white flex justify-center items-center rounded-full">
