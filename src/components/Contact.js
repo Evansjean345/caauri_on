@@ -136,7 +136,9 @@ export default function Contact() {
               </div>
             </span>
             <br className="sm:hidden block" />
-            <div className="sm:hidden flex justify-center">
+            <div className="sm:hidden flex justify-center"
+             onClick={sendEmail}
+            >
               <span className="w-[100px] h-[29px]   sm:hidden flex items-center justify-center group">
                 <div className="mt-5 flex  justify-center items-center gap-0 py-4 px-4 bg-black w-[152px] rounded-full transition-all   text-white rounded-l-full rounded-r-full">
                   <div className="text-xl pl-2">Envoyer</div>
