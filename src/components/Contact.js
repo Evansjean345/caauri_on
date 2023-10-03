@@ -6,10 +6,10 @@ import Footer from "./Footer";
 export default function Contact() {
   const form = useRef();
 
-  const sendEmail = async (e) => {
+  const sendEmail =  (e) => {
     e.preventDefault();
 
-    await emailjs
+     emailjs
       .sendForm(
         "service_v04i8hh",
         "template_xl8dtll",
@@ -24,8 +24,8 @@ export default function Contact() {
           console.log(error.text);
         }
       );
-    await alert("votre demande a bien été prise en compte ");
-    await window.location.reload();
+     alert("votre demande a bien été prise en compte ");
+     window.location.reload();
   };
   return (
     <div className="bg-white text-black">
