@@ -6,10 +6,10 @@ import Footer from "./Footer";
 export default function Contact() {
   const form = useRef();
 
-  const sendEmail =  (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
-     emailjs
+    emailjs
       .sendForm(
         "service_v04i8hh",
         "template_xl8dtll",
@@ -24,8 +24,8 @@ export default function Contact() {
           console.log(error.text);
         }
       );
-     alert("votre demande a bien été prise en compte ");
-     window.location.reload();
+    alert("votre demande a bien été prise en compte ");
+    window.location.reload();
   };
   return (
     <div className="bg-white text-black">
@@ -64,45 +64,25 @@ export default function Contact() {
               <label htmlFor="" className="font-medium text-lg">
                 Votre nom
               </label>
-              <Input
-                variant="static"
-                size="lg"
-                color="black"
-                name="name"
-              />
+              <Input variant="static" size="lg" color="black" name="name" />
             </div>
             <div>
               <label htmlFor="" className="font-medium text-lg">
                 Votre adresse mail
               </label>
-              <Input
-                variant="static"
-                size="lg"
-                color="black"
-                email="email"
-              />
+              <Input variant="static" size="lg" color="black" email="email" />
             </div>
             <div>
               <label htmlFor="" className="font-medium text-lg">
                 Société
               </label>
-              <Input
-                variant="static"
-                size="lg"
-                color="black"
-                name="society"
-              />
+              <Input variant="static" size="lg" color="black" name="society" />
             </div>
             <div className="flex flex-col space-y-8">
               <label htmlFor="" className="font-medium text-lg">
                 Votre projet concerne
               </label>
-              <Input
-                variant="static"
-                size="lg"
-                color="black"
-                name="projet"
-              />
+              <Input variant="static" size="lg" color="black" name="projet" />
             </div>
             <div className="border-b border-black">
               <label
@@ -136,9 +116,7 @@ export default function Contact() {
               </div>
             </span>
             <br className="sm:hidden block" />
-            <div className="sm:hidden flex justify-center"
-             onClick={sendEmail}
-            >
+            <div className="sm:hidden flex justify-center" onClick={sendEmail}>
               <span className="w-[100px] h-[29px]   sm:hidden flex items-center justify-center group">
                 <div className="mt-5 flex  justify-center items-center gap-0 py-4 px-4 bg-black w-[152px] rounded-full transition-all   text-white rounded-l-full rounded-r-full">
                   <div className="text-xl pl-2">Envoyer</div>
