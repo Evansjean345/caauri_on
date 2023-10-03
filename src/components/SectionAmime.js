@@ -33,7 +33,7 @@ export default function SectionAmime() {
       <br />
       <br />
       {/*partie 2 */}
-      <div className="remove_div w-full mt-6  flex flex-nowrap sm:flex-wrap bg-white relative">
+      <div className="remove_div  w-full mt-6  flex flex-nowrap sm:flex-wrap bg-white relative">
         <div className="w-[60%]">
           {/* Animation du text */}
           <div className="flex flex-col py-4 px-6 sm:px-12">
@@ -596,7 +596,7 @@ export default function SectionAmime() {
         </div>
       </div>
 
-      <div className="visible_div">
+      <div className="block sm:hidden">
         <div className="flex flex-col items-center justify-center py-4 ">
           <div
             data-aos="fade-right"
