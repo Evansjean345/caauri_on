@@ -13,7 +13,7 @@ export default function Footer() {
             Contact@caauri.com
           </span>
           <span className="font-thin mt-6  text-start text-xl">
-            Résevervez une consultation gratuite
+            Réservez une consultation gratuite
             <br />
             ou envoyez nous un email
           </span>

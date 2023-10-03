@@ -1,8 +1,32 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
+import emailjs, { sendForm } from "@emailjs/browser";
 import { Input } from "@material-tailwind/react";
 import Footer from "./Footer";
 
 export default function Contact() {
+  const form = useRef();
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    await emailjs
+      .sendForm(
+        "service_v04i8hh",
+        "template_xl8dtll",
+        form.current,
+        "Q4WRRBr-g-dWIEU9G"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    await alert("votre demande a bien été prise en compte ");
+    await window.location.reload();
+  };
   return (
     <div className="bg-white text-black">
       {/* First Section */}
@@ -29,30 +53,56 @@ export default function Contact() {
           </div>
         </div>
         <div className="lg:w-1/2 w-full lg:order-2 order-1 pr-0 lg:pr-20">
-          <form action="" method="post" className="flex flex-col space-y-12">
+          <form
+            action=""
+            method="post"
+            ref={form}
+            onSubmit={sendEmail}
+            className="flex flex-col space-y-12"
+          >
             <div>
               <label htmlFor="" className="font-medium text-lg">
                 Votre nom
               </label>
-              <Input variant="static" size="lg" color="black" />
+              <Input
+                variant="static"
+                size="lg"
+                color="black"
+                name="name"
+              />
             </div>
             <div>
               <label htmlFor="" className="font-medium text-lg">
                 Votre adresse mail
               </label>
-              <Input variant="static" size="lg" color="black" />
+              <Input
+                variant="static"
+                size="lg"
+                color="black"
+                email="email"
+              />
             </div>
             <div>
               <label htmlFor="" className="font-medium text-lg">
                 Société
               </label>
-              <Input variant="static" size="lg" color="black" />
+              <Input
+                variant="static"
+                size="lg"
+                color="black"
+                name="society"
+              />
             </div>
             <div className="flex flex-col space-y-8">
               <label htmlFor="" className="font-medium text-lg">
                 Votre projet concerne
               </label>
-              <Input variant="static" size="lg" color="black" />
+              <Input
+                variant="static"
+                size="lg"
+                color="black"
+                name="projet"
+              />
             </div>
             <div className="border-b border-black">
               <label
@@ -69,11 +119,15 @@ export default function Contact() {
       file:bg-[#D9D9D9]
       hover:file:bg-[#c3c3c3]
     "
+                    name="my_file"
                   />
                 </span>
               </label>
             </div>
-            <span className="w-[250px] h-[29px] group sm:block hidden">
+            <span
+              onClick={sendEmail}
+              className="w-[250px] h-[29px] cursor-pointer group sm:block hidden"
+            >
               <div className="mt-5 flex gap-5 hover:flex hover:justify-center hover:items-center hover:gap-0 py-4 hover:bg-black w-[152px] rounded-full transition-all px-2   hover:text-white hover:rounded-l-full hover:rounded-r-full">
                 <div className="text-xl">Envoyer</div>
                 <div className="bg-black rounded-b-full w-[29px]  transition-all flex items-center hover-bg-none justify-center rounded-l-full">
